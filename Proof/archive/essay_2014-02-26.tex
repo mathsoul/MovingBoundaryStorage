@@ -1,0 +1,675 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\q}{\tilde{q}}
+\newcommand{\x}{\tilde{x}}
+%\makeatletter
+%\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+%\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+%
+%\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+%\begin{flushright} % Right align
+%{\LARGE\@title} % Increase the font size of the title
+%
+%\vspace{50pt} % Some vertical space between the title and author name
+%
+%{\large\@author} % Author name
+%\\\@date % Date
+%
+%\vspace{40pt} % Some vertical space between the author block and abstract
+%\end{flushright}
+%}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+%\title{\textbf{Unnecessarily Long Essay Title}\\ % Title
+%Focused and Deliciously Witty Subtitle} % Subtitle
+%
+%\author{\textsc{Ford Prefect} % Author
+%\\{\textit{Interstellar University}}} % Institution
+%
+%\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+%\begin{abstract}
+%
+%\end{abstract}
+%
+%\hspace*{3,6mm}\textit{Keywords:} lorem , ipsum , dolor , sit amet , lectus % Keywords
+%
+%\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+
+
+
+\section*{Unique Boundary of Injection}
+
+Let $(x_0,q_0)$ be the boundary point of holding and injection. What's more assume that the holding region lays in the southeast of the point while the injection region lays in the northeast. \\
+
+\begin{enumerate}
+
+\item $V(x,q)$ belongs to $C^{2,1}$ and $V_{qxx}$ is also continuous everywhere including boundary.
+
+\begin{proof}
+
+Because for any point $(x,q)$ in holding region
+
+\begin{equation*}
+\LL V_q (x,q) = 0
+\end{equation*}
+
+holds,  by the smoothness of $V(x,q)$,
+
+\begin{equation*}
+\LL V_q (x_0,q_0) = 0.
+\end{equation*}
+
+Similarly, for any point $(x,q)$ in the injection region
+
+\begin{equation*}
+\LL V_q(x,q) = \frac{1}{2} \sigma^2 e^{x} + k(\alpha -x) e^{x} - \beta (e^{x} +\lambda(q)))
+\end{equation*}
+
+holds, the smoothness gives us
+
+\begin{equation*}
+\LL V_q(x_0,q_0) = \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))).
+\end{equation*}
+
+Combine those two, we have 
+
+\begin{equation*}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))) = 0.
+\end{equation*}
+
+If $\lambda(q)$ is strictly monotone,  above equality with $x_0$ fixed only holds at a unique point namely there is only one boundary.\\
+\end{proof}
+
+\textbf{Why the first assumption is wrong.}\\
+
+Assume it is right, the boundary of withdrawing can be described as 
+
+\begin{equation*}
+\frac{1}{2}\sigma^2 e^x + k(\alpha - x) e^x - \beta (e^x - \mu(q)) = 0.
+\end{equation*}
+
+Reform it into the following equality
+
+\begin{equation*}
+\beta (e^x - \mu(q)) =  \frac{1}{2}\sigma^2 e^x + k(\alpha - x) e^x. 
+\end{equation*}
+
+However, when $x \rightarrow +\infty$, the right hand side goes to $-\infty$. This means that $e^x - \mu(q) < 0$ when $x \rightarrow +\infty$. However, this is impossible since $e^x -\mu(q)$ is the profit when you sell which can not be negative.
+
+
+\item $V(x,q)$ belongs to $C^{2,1}$,  $V_{qxx}$ is also continuous everywhere except boundary but $V_{xx}, V_{x}, V$ are continuous with respect to $q$ at the boundary.\\
+\begin{proof}
+Since we don't have the continuity of $V_{qxx}$ at the boundary points, previous arguments can't hold. We only have 
+
+\begin{equation*}
+\begin{split}
+\LL V_q(x_0-,q_0) &= 0 \\ 
+\LL V_q(x_0+,q_0) &= \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))).
+\end{split}
+\end{equation*}
+
+On the other hand, for any point $(x,q)$ in the holding region
+
+\begin{equation*}
+\begin{split}
+e^x - \mu(q) < V_q(x,q) < e^x + \lambda(q).
+\end{split}
+\end{equation*}
+
+What's more, at $(x_0,q_0)$ we have $V_q(x_0,q_0) = e^{x_0} + \lambda(q_0)$ which means that function
+\begin{equation*}
+f(x) = V_q(x,q_0) - (e^{x} + \lambda(q_0))
+\end{equation*}
+
+achieves its maximum at point $x_0$. Therefore, $f''(x_0) \leq 0$. Moreover, by the continuous conditions
+
+\begin{equation*}
+\begin{split}
+f(x_0) &= V_q(x_0,q_0) - (e^{x_0} + \lambda(q_0)) =0 \\
+f'(x_0) & = V_{qx}(x_0,q_0) - e^{x_0} =0.
+\end{split}
+\end{equation*}
+
+Thus 
+\begin{equation*}
+\LL f(x_0) = \frac{1}{2} \sigma^2 f''(x_0) + k(\alpha- x_0)f'(x_0) -\beta f(x_0) = \frac{1}{2} \sigma^2 f''(x_0) \leq 0.
+\end{equation*}
+
+Meanwhile 
+\begin{equation*}
+\begin{split}
+\LL (V_q(x_0-,q_0) &- (e^{x_0} +\lambda(q_0))) = \LL V_q(x_0-,q_0) - \LL(e^{x_0} +\lambda(q_0)) \\
+&= 0 - (\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))).
+\end{split}
+\end{equation*}
+
+Combine those two 
+
+\begin{equation*}
+- (\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))) \leq 0,
+\end{equation*}
+
+namely 
+\begin{equation}\label{geq}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))) \geq 0.
+\end{equation}
+
+Assume we also have another boundary point with the same level of price on the left hand side of $(x_0,q_0)$ , i.e. $(x_0,q_1)$ where $q_1 < q_0$ and there is no other boundary point between them. Therefore
+
+\begin{equation*}
+\begin{split}
+V(x_0,q_0) &= V(x_0,q_1) + \int_{q_1}^{q_0} V_q(x_0,q) dq\\
+&=V(x_0,q_1) + (q_1-q_0) e^{x_0} + \int_{q_1}^{q_0} \lambda(q) dq.
+\end{split}
+\end{equation*}
+
+Use operator $\LL$ to both sides, 
+
+\begin{equation*}
+\LL V(x_0,q_0) = \LL V(x_0,q_1) + \LL ((q_1-q_0) e^{x_0} + \int_{q_1}^{q_0} \lambda(q) dq)
+\end{equation*}
+
+By the continuity of $V_{xx}, V_{x}, V$  with respect to $q$ on the boundary, we have 
+
+\begin{equation*}
+\LL V(x_0,q_0) = \LL V(x_0,q_1) = 0.
+\end{equation*}
+
+So
+\begin{equation*}
+\LL ((q_1-q_0) e^{x_0} + \int_{q_1}^{q_0} \lambda(q) dq) = 0,
+\end{equation*}
+
+which gives us
+
+\begin{equation*}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\frac{1}{q_0-q_1}\int_{q_1}^{q_0}\lambda(q)dq) = 0.
+\end{equation*}
+
+This can't happen if $\lambda(q)$ is strictly increasing on $[q_1,q_0]$, because by (\ref{geq})
+
+\begin{equation*}
+\begin{split}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta e^{x_0} \geq \beta \lambda(q_0) >\frac{1}{q_0-q_1}\int_{q_1}^{q_0}\lambda(q)dq .
+\end{split}
+\end{equation*}
+
+Assume that there is another boundary point $(x_0,q_2)$ at the right hand side of $(x_0,q_0)$, namely $q_2>q_0$ and the region between them are holding region. By the previous result, there can't be a boundary point on the right hand side of $(x_0,q_2)$. Let $(x_0,q_3)$ where $q_3 > q_2$, then $(x_0,q_3)$ must belong to injection region.
+
+Similarly
+
+\begin{equation*}
+\begin{split}
+\LL V(x_0,q_2) &= 0 \\
+\LL V(x_0,q_3)& < 0\\
+V(x_0,q_3) &= V(x_0,q_2) + (q_3-q_2) e^{x_0} + \int_{q_2}^{q_3} \lambda(q) dq.
+\end{split}
+\end{equation*}
+ 
+Use operator $\LL$ to both sides of the last equality and use the top two 
+
+\begin{equation*}
+0>\LL V(x_0,q_3) = 0 + (q_3-q_2) (\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\frac{1}{q_3-q_2}\int_{q_2}^{q_3}\lambda(q)dq)).
+\end{equation*}
+
+This shows that 
+
+\begin{equation*}
+ \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\frac{1}{q_3-q_2}\int_{q_2}^{q_3}\lambda(q)dq) < 0.
+\end{equation*}
+
+Let $q_3 \rightarrow q_2$, 
+
+\begin{equation*}
+ \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_2) )\leq 0.
+\end{equation*}
+
+On the other hand, $(x_0,q_2)$ is the boundary point, thus
+
+\begin{equation*}
+ \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_2) )\geq 0.
+\end{equation*}
+
+Combine those two,
+
+\begin{equation*}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_2) )= 0.
+\end{equation*}
+
+\end{proof}
+
+\item $V(x,q)$ belongs to $C^{2,1}$,  $V_{qxx}$ is also continuous everywhere except boundary and we don't have the continuity with respect to $q$.\\
+
+Then the only thing we have is 
+
+\begin{equation}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))) \geq 0.
+\end{equation}
+
+\end{enumerate}
+
+\section*{Unique Boundary of Withdraw}
+
+For the withdraw region, the same arguments can be still used to obtain similar result. The weakest conditions will give us.
+
+\begin{equation*}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} -\mu(q_0))) \leq 0.
+\end{equation*}
+
+Noticing that 
+\begin{equation*}
+\frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} -\mu(q_0))) \geq \frac{1}{2} \sigma^2 e^{x_0} + k(\alpha -x_0) e^{x_0} - \beta (e^{x_0} +\lambda(q_0))),
+\end{equation*}
+
+it is impossible to inject and withdraw at the same price level no matter what the value $q$ is.\\
+
+\section*{Thinking}
+Personally speaking, I think the assumption in the first case is too strong to be true while the third is too weak to derive sufficient properties. The second one is my favorite and I get the feeling that it may be true because adding another dimension (here is volume) sometimes improve the continuity.
+
+
+
+\newpage
+We want to use solve the following linear equations without taking the inverse of the matrix
+\begin{equation} \label{linear equation}
+Ax = b
+\end{equation}
+
+Let $B = (I - A)$, then
+
+\begin{equation*}
+x = Bx + b.
+\end{equation*}
+
+We can do iteration using this the method generating from above equality.
+
+\begin{equation*}
+x_{n+1} = Bx_{n} + b.
+\end{equation*}
+
+If $x_{n}$ converges, then it must converge to the solution of $Ax = b$.
+
+%\section*{Introduction}
+%\section{Draft}
+%
+%Assume that $(x_0,q_0)$ is a regular changing point and there exist $x_1< x_0$ and $q_0<q_1$ such that $H = (x_1, x_0) \times (q_0,q_1)$ belongs to the holding region. For any point $(x,q)$ in $H$, 
+%\begin{equation*}
+%\LL V(x,q) = 0.
+%\end{equation*}
+%
+%Since $H$ is an open set, we can take derivative with respect to $q$ to both sides of the previous equality
+%
+%\begin{equation*}
+%\LL V_q(x,q) = 0 \\
+%\end{equation*}
+%
+%
+%If  we have $V \in C^{2,1}[H]$, then we shall have 
+%
+%\begin{equation*}
+%\LL V_q(x_0-,q_0+) = 0
+%\end{equation*}
+%
+%Let $f(x) = V_q(x,q_0+) - (e^x +\lambda(q_0))$ where $ x \in (x_1,x_0)$. By the smooth fit conditions we have 
+%
+%\begin{equation*}
+%\begin{split}
+%&f(x_0) = V_q(x_0,q_0+) -(e^{x_0} + \lambda(q_0)) = V_q(x_0-,q_0+) -(e^{x_0} + \lambda(q_0)) = 0\\
+%&f'(x_0) = V_{qx}(x_0,q_0+) - e^{x_0} = V_{qx}(x_0-,q_0+) - e^{x_0} = 0\\
+%&f''(x_0-) \leq 0 
+%\end{split}
+%\end{equation*}
+%
+%the last inequality holds because $f(x)$ takes its maximum at $x_0$.
+%
+%Then $f(x)$ takes its maximum at $x_0$ 
+%
+%\begin{equation*}
+%f''(x) \leq 0
+%\end{equation*}
+%
+%On the other hand, 
+%
+%\begin{equation*
+%
+%Version of 2014-02-03\\
+%
+%The proof in the first section in previous version assume that $V_{xx}$ is discontinuous at the changing point. However, this is not true and the reason is as following. since we have $V(x,q) = q(e^x + \lambda) + V(x,0)$, $V_{xx}(x,q)$ is not continuous if and only if $V_{xx}(x,0)$ is not neither. However, it is proved that $(x,0)$ can't be the point of changing. Contradiction! Thus we must have $V_{xx}$ is continuous.\\ 
+%
+%The portrait of injection region is first discussed. It can be proved that the changing points between holding and injection must satisfy one inequality. Similarly, it can be shown that the changing points between holding and injection must satisfy another inequality. Amazingly, it is impossible to satisfy both inequality at the same time. Then it is shown that it is impossible to always do nothing no matter how high the price is. At last, we prove that if we withdraw at one price which is above certain level, we will withdraw at any price that is larger than the price just mentioned.\\
+%
+%%One important thing to remember is that if there is no difference between injection and holding, we will always hold. This is to say, at injecting point, injection is strictly better than holding.
+%
+%
+%\section{Injection region}
+%First recall the HJB equation as following 
+%
+%\begin{equation*}
+%\max(V_q-(e^x+\lambda), \LL V, -V_q +(e^x-\mu)) = 0
+%\end{equation*}
+%
+%where 
+%
+%\begin{equation}\label{L}
+%\LL V = \frac{1}{2}\sigma^2 V_{xx} + k(\alpha - x)V_x - \beta V.
+%\end{equation}
+%
+%Let $(x_0,q_0)$ be the point of changing\footnote{Here we assume that it is injection above $x_0$ while holding below $x_0$. Moreover, if it is not this case, all the proof here still remains because we only use the property at point $(x_0,q_0)$.}. Since $V(x,q)$ is $C^{2,1}$, there must be $x_1$ and $x_2$ which satisfy $x_2 < x_0 < x_1$ such that $\{(x,q_0)|~x\in(x_2,x_0)\}$ belongs to holding region while $\{(x,q_0)|~x\in(x_0,x_1)\}$ belongs to injecting region. Mathematically speaking,
+%%Mathematical description for the changing point
+%\begin{equation}\label{changing}
+%\begin{split}
+%&\left.
+%\begin{array}{l}
+%\LL V(x,q_0) = 0 \\
+%V_q(x,q_0) < e^{x} + \lambda\\
+%V_q(x,q_0) >e^x - \mu\\
+%\end{array}
+%\right\} \forall x \in (x_2,x_0)\\.
+%&\left.
+%\begin{array}{l}
+%\LL V(x,q_0) < 0  \\
+%V_q(x,q_0) = e^{x} + \lambda\\
+%V_q(x,q_0) > e^x - \mu\\
+%\end{array}
+%\right\} \forall x \in (x_0,x_1)
+%\end{split}
+%\end{equation}
+%
+%There is one thing that is worth to notice, since we lack the second order continuity with respect to $x$ at point $(x_0,q_0)$, we don't know whether $V_{xx}$ exists or not, let alone $\LL V(x_0,q_0) = 0$. Meanwhile we do have
+%\begin{equation*}
+%\begin{array}{l}
+%V_q(x_0,q_0) = e^{x_0} + \lambda\\
+%\LL V(x_0+,q_0) \leq 0\\
+%\LL V(x_0-,q_0) = 0\\
+%V_q(x_0,q_0) > e^x - \mu\\
+%\end{array}\\
+%\end{equation*}
+%
+%
+%%Value of V(x,q)
+%By the convexity for $V(x,q)$ with respect to $q$
+%\begin{equation*}
+%V_q(x,q) = e^{x} + \lambda \quad \forall (x,q) \in [x_0,x_1]\times [0,q_0].
+%\end{equation*}
+%Therefore, 
+%\begin{equation}\label{Vvalue}
+%V(x,q_0) = q_0(e^{x}+\lambda) + V(x,0)  \quad \forall (x,q) \in [x_0,x_1]\times [0,q_0].
+%\end{equation}\footnote{$V(x,0)$ may not be $0$, since we can make money by buying low and selling high.}
+%
+%%Smoothness of V(x,q)
+%Therefore $V(x,q_0)$ shares the same level of smoothness as $V(x,0)$. However, $V(x,0)$ is second order discontinuous if and only if $(x_0,0)$ is also the point of changing. By the convexity of $V(x,q)$ with respect to $q$, all the points $\{(x_0,q), q\leq q_0\}$ are on the boundary. Define
+%\begin{equation*}
+%q_1 = \sup\{q\leq Q |(x_0,q) \mbox{ is on the boundary}\}.
+%\end{equation*}
+%By definition, $q_0 \leq q_1 \leq Q$. Moreover, $\LL V(x_0+,q_1) = 0$. If not, by the continuity of $V_{xx}, V_x$ and $V$ with respect to $q$, we can have a $q_2 > q_1$ such that $(x_0,q_2)$ is on the boundary which contradicts the definition of $q_1$.  Noticing that $\forall q<q_1$
+%\begin{equation*}
+%\LL V(x_0+,q) = \frac{1}{2}\sigma^2(qe^{x_0} + V_{xx}(x_0+,0)) + k(\alpha -x_0)(qe^{x_0}+V_x(x_0,0)) - \beta(q(e^{x_0}+\lambda) + V(x_0,0)).
+%\end{equation*}
+%Take $q \rightarrow q_1$,
+%\begin{equation*}
+%0 = \LL V(x_0+,q_1) = \frac{1}{2}\sigma^2(q_1e^{x_0} + V_{xx}(x_0+,0)) + k(\alpha -x_0)(q_1e^{x_0}+V_x(x_0,0)) - \beta(q_1(e^{x_0}+\lambda) + V(x_0,0)).
+%\end{equation*}
+%On the other hand $\forall q<q_1$
+%\begin{equation*}
+%\LL V(x_0-,q) = \frac{1}{2}\sigma^2(qe^{x_0} + V_{xx}(x_0-,0)) + k(\alpha -x_0)(qe^{x_0}+V_x(x_0,0)) - \beta(q(e^{x_0}+\lambda) + V(x_0,0)).
+%\end{equation*}
+%Take $q \rightarrow q_1$,
+%\begin{equation*}
+%0 = \LL V(x_0-,q_1) = \frac{1}{2}\sigma^2(q_1e^{x_0} + V_{xx}(x_0-,0)) + k(\alpha -x_0)(q_1e^{x_0}+V_x(x_0,0)) - \beta(q_1(e^{x_0}+\lambda) + V(x_0,0)).
+%\end{equation*}
+%Thus $V_{xx}(x_0 + ,0) = V_{xx}(x_0-,0)$ which is a contradiction. Thus $V_{xx}$ must belong to $C^{(2,1)}$ even at the changing points.\\
+%
+%%The inequality
+%Noticing that 
+%\begin{equation}
+%\begin{split}
+%0 &= \LL V(x_0, q_0) =\lim_{x\downarrow x_0} \LL V(x,q_0) \\
+%&= \lim_{x\downarrow x_0} (\LL q_0(e^x +\lambda) + \LL V(x,0))\\
+%&=\LL q_0(e^{x_0} +\lambda) + \LL V(x_0,0)\\
+%\end{split}
+%\end{equation}
+%By the convexity of $V(x,q)$, $(x_0,0)$ belongs to injection region which means $\LL V(x_0,0) \leq 0$. Thus 
+%\begin{equation*}
+%\LL (e^{x_0} +\lambda) = - \frac{\LL V(x_0,0)}{q_0} \geq 0,
+%\end{equation*}
+%while the left hand side is 
+%\begin{equation*}
+%\frac{1}{2}\sigma^2 e^{x_0} +k(\alpha - x_0) e^{x_0} - \beta(e^{x_0}+ \lambda) = f_1(x_0).
+%\end{equation*}
+%Since
+%\begin{equation*}
+%\begin{split}
+%\lim_{x\rightarrow +\infty} f_1(x) = -\infty\\
+%\lim_{x\rightarrow -\infty}f_1(x) = -\beta \lambda < 0
+%\end{split}
+%\end{equation*}
+%Thus, it is impossible to buy no matter the price is low enough or high enough.
+%
+%\section{Withdraw region}
+%Similarly, if $(x_0,q_0)$ is the point of changing between holding and withdraw, then we should have
+%\begin{equation*}
+%V(x_0,q_0)  = V(x_0,Q)  - (Q-q_0)(e^{x_0} - \mu)
+%\end{equation*}
+%and
+%\begin{equation*}
+%\LL V(x_0,q_0) = 0.
+%\end{equation*}
+%Plug the first equation into the second, 
+%\begin{equation*}
+%\LL (V(x_0,Q)  - (Q-q_0)(e^{x_0} - \mu)) = 0.
+%\end{equation*}
+%Thus 
+%\begin{equation*}
+%\LL (e^{x_0} - \mu) = \frac{\LL V(x_0,Q)}{Q-q_0} \leq 0
+%\end{equation*}
+%The left hand side is 
+%\begin{equation*}
+%\frac{1}{2}\sigma^2 e^{x_0} +k(\alpha - x_0) e^{x_0} - \beta(e^{x_0}- \mu) = f_2(x_0).
+%\end{equation*}
+%Since
+%\begin{equation*}
+%\begin{split}
+%\lim_{x\rightarrow -\infty}f_2(x) = \beta \lambda > 0
+%\end{split}
+%\end{equation*}
+%Thus it is impossible to sell when the price is low enough. Amazingly, since $f_2 = f_1 + \beta(\mu+\lambda)$, $f_2 \leq 0 \Rightarrow f_1 < 0$ which means that those two sets doesn't intersect.
+%
+%
+%\section{Holding region}
+%In this section, we would like to prove that it is impossible to hold whenever how high the price is. If not, $\exists M_0>\alpha, \q$ such that for any $x>M_0$,
+%\begin{equation*}
+%\begin{split}
+%V_q(x,\q) & \leq e^{x} + \lambda\\
+%\LL V(x,\q) &=  0\\
+%V_q(x,\q) &\geq e^{x} - \mu.\\
+%\end{split}
+%\end{equation*}
+%Take derivative with respect to $q$ to both sides of second equality,
+%\begin{equation*}
+%\begin{split}
+%V_q(x,\q) & \leq e^{x} + \lambda\\
+%\LL V_q(x,\q) &=  0\\
+%V_q(x,\q) &\geq e^{x} - \mu.\\
+%\end{split}
+%\end{equation*}
+%Define
+%\begin{equation}\label{h}
+%h(x) = V_q(x,\q) - (e^x -\mu).
+%\end{equation}
+%Therefore, $\forall x>M_0$
+%\begin{equation}\label{hin}
+%0\leq h(x) \leq \lambda + \mu.
+%\end{equation}
+%Substitute (\ref{h}) into $\LL V_q(x,\q) = 0$, 
+%\begin{equation}\label{hPDE}
+%\frac{1}{2}\sigma^2h''(x) + k(\alpha-x)h'(x) - \beta h = - \frac{1}{2}\sigma^2 e^x + k (x- \alpha)e^x + \beta(e^x - \mu).
+%\end{equation}
+%First, we would like to prove that $h'(x)$ must change sign on $[M_0,\infty)$. If not, assume $h'(x) \geq 0~ \forall x>M_0$, then by  (\ref{hin}) and (\ref{hPDE})
+%\begin{equation}\label{h''}
+%\frac{1}{2}\sigma^2h''(x)  \geq - \frac{1}{2}\sigma^2 e^x + k (x- \alpha)e^x + \beta(e^x - \mu).
+%\end{equation}
+%However, by Fubini's theorem, $\forall N > M_0$
+%\begin{equation}\label{Fubini}
+%\begin{split}
+%h(N) - h(M_0) &= \int_{M_0}^{N}h'(t)dt = \int_{M_0}^{N}(\int_{M_0}^{t}h''(x)dx+h'(M_0))dt\\
+%&=  \int_{M_0}^{N}\int_{M_0}^{t}h''(x)dxdt +(N-M_0)h'(M_0)\\
+%&= \int_{M_0}^{N}\int_{x}^{N}h''(x)dtdx +(N-M_0)h'(M_0)\\
+%&= \int_{M_0}^{N}(N-x)h''(x)dx +(N-M_0)h'(M_0).
+%\end{split}
+%\end{equation}
+%Substitute (\ref{h''}) and $h'(M_0) \geq 0$ into (\ref{Fubini})
+%\begin{equation*}
+%\begin{split}
+%h(N) - h(M_0)  &= \int_{M_0}^{N}(N-x)h''(x)dx +(N-M_0)h'(M_0)\\
+%&\geq  \int_{M_0}^{N}(N-x)(- e^x + \frac{2k}{\sigma^2} (x- \alpha)e^x + \frac{2\beta}{\sigma^2}(e^x - \mu))dx
+%\end{split}
+%\end{equation*}
+%which shows that $h(N) - h(M_0) \rightarrow +\infty$ when $N\rightarrow +\infty$. However via (\ref{hin}),
+%\begin{equation}\label{bound}
+%-(\lambda+\mu) \leq h(N)-h(M_0) \leq (\lambda + \mu)
+%\end{equation}  
+%holds when $\forall N >M_0$. Contradiction!\\
+% Assume that $h'(x) < 0 ~\forall x>M_0$. Define
+% \begin{equation*}
+% g(x) = - \frac{1}{2}\sigma^2 e^x + k (x- \alpha)e^x + \beta(e^x - \mu) - k(x-\alpha).
+% \end{equation*}
+% Then we have
+% \begin{equation*}
+% g'(x) = - \frac{1}{2}\sigma^2 e^x + k (x- \alpha+1)e^x + \beta e^x  - k.
+% \end{equation*}
+% Noticing that both $g(x) \rightarrow +\infty$ and $g'(x) \rightarrow +\infty$ when $x \rightarrow +\infty$, there exists a $M_1 > M_0$ such that $g(M_1) > 0$ and $g(x)$ is increasing on $[M_1,+\infty)$. On the other hand, 
+%combining (\ref{bound}) and
+% \begin{equation*}
+% h(N) - h(M_1) = \int_{M_1}^{N} h'(t) dt,
+% \end{equation*}
+% there must exist a $M_2 > M_1$ which satisfies that $h'(M_2) > -1$. By (\ref{hPDE})
+% \begin{equation*}
+% \frac{1}{2}\sigma^2h''(M_2)  \geq - \frac{1}{2}\sigma^2 e^{M_2} + k (M_2- \alpha)e^{M_2} + \beta(e^{M_2} - \mu) - k({M_2}-\alpha) =g(M_2)>0
+% \end{equation*}
+% namely
+% \begin{equation*}
+% h''(M_2) > 0.
+% \end{equation*}
+% Let $\x = \inf\{x>M_2|h'(x) = -1\}$. If $\x < +\infty$ then $h''(\x) \leq 0$. However, (\ref{hPDE}) at point $\x$ shows us
+% \begin{equation*} 
+% \begin{split}
+% \frac{1}{2}\sigma^2h''(\x) &= - \frac{1}{2}\sigma^2 e^{\x} + k (\x- \alpha)e^{\x} + \beta(e^{\x} - \mu) + k(\x-\alpha)h'(\x) + \beta h(\x)\\
+%&\geq - \frac{1}{2}\sigma^2 e^{\x} + k (\x- \alpha)e^{\x} + \beta(e^{\x} - \mu) - k(\x-\alpha) = g(\x).
+% \end{split}
+% \end{equation*}
+% Since  $g(x)$ is increasing on $[M_1,+\infty)$, $g(\x) \geq g(M_1)  > 0$. 
+% \begin{equation*}
+%  \frac{1}{2}\sigma^2h''(\x) = g(\x) > 0.
+% \end{equation*}
+% Contradiction! Therefore $h'(x)$ must change signs infinite times since we can replace $M_0$ with a sequence whose limit is $+\infty$.  Let $M_3$ be the point that $h'(x)$ changes from positive to negative. $M_3$ can be arbitrarily large and $h'(M_3) = 0$, $h''(M_3) \leq 0$. However, at point $M_3$ there is no chance that (\ref{hPDE}) holds when $M_3$ is large enough. Contradiction! We prove that we must inject or withdraw at some  prices. Section 1 shows that injection is impossible here, so we must withdraw at some prices.\\
+% 
+% Actually it is possible to quantify 'large enough' in this section. $x^*$ is big enough if expression $g(x)$ is positive when $x\geq x^*$.
+% \section{Withdraw region}
+% In this section we would like to show that if $(M, \q)$ is a withdrawing point and $M$ is big enough, any point $(x,\q)$ where $x>M$ is also a withdrawing point. If not, let $(x_3,\q)$ be the point changes from withdrawal to holding. The smooth fit conditions tell us
+% \begin{equation*}
+% h(x_3) = 0 \quad h'(x_3) =0
+% \end{equation*}
+% where $h(x)$ is defined in the previous section. Define
+% \begin{equation*}
+% x_4 = \inf\{x>x_3|h'(x)=0\}.
+% \end{equation*}
+%If $x_4 < +\infty$, 
+%\begin{equation*}
+%h'(x_4) =0 \quad h''(x_4) \leq 0 .
+%\end{equation*}
+%However, it is impossible to have (\ref{hPDE}) hold at point $x_4$ when $x_4$ is big enough. Thus $x_4 = +\infty$ namely $h'(x) > 0~ \forall x > x_3$. On the other hand, previous section tells us there must be another withdrawing point $x_5 > x_3$. Still by smooth fit conditions at $x_5$, $h'(x_5) = 0$. Contradiction! \\
+%
+%Actually it is possible to quantify 'big enough' in this section. $x^*$ is big enough if expression 
+%$f_2(x)$ is negative when $x\geq x^*$.
+%%I want to show that it is impossible to inject when the price is big enough. And amazingly I should that it is impossible to change from holding to injection. First recall the PDE we have.
+%%\begin{equation}
+%%\frac{1}{2}\sigma^2f''(x) + k(\alpha-x)f'(x) - \beta f(x) = - \frac{1}{2}\sigma^2 e^x + k(x-\alpha)e^x + \beta(e^x - \mu) 
+%%\end{equation}
+%%At the injection point $x_0$, we have $f(x_0) = \mu + \lambda$ and $f'(x_0) = 0$. If we approach $x_0$ from holding region we should have\footnote{$f''$ is not continuous at point $x_0$.}
+%%\begin{equation}
+%%\frac{1}{2}\sigma^2f''(x_0) - \beta (\mu+\lambda)= - \frac{1}{2}\sigma^2 e^{x_0} + k(x_0-\alpha)e^{x_0} + \beta(e^{x_0} - \mu) 
+%%\end{equation}
+%%Therefore,
+%%\begin{equation}
+%%\frac{1}{2}\sigma^2f''(x_0)= - \frac{1}{2}\sigma^2 e^{x_0} + k(x_0-\alpha)e^{x_0} + \beta(e^{x_0} + \lambda)
+%%\end{equation}
+%%Let 
+%%\begin{equation}
+%%t(x) =  - \frac{1}{2}\sigma^2 e^{x} + k(x-\alpha)e^{x} + \beta(e^{x} + \lambda)
+%%\end{equation}
+%%If  $t(x_0) > 0$ then $f''(x_0) > 0$. However, $f$ has the maximum value as $\mu + \lambda$ and $f'(x_0) = 0$, therefore $f''(x_0) \leq0$. Contradiction. Therefore, we must have $t(x_0) \leq 0$.  Then $f(x) = \mu + \lambda~for ~\{x>x_0\}\cap\{injection~region\} $. If we approach $x_0$ from above we should have 
+%%\begin{equation}
+%%\frac{1}{2}\sigma^2f''(x_0) + k(\alpha-x_0)f'(x_0) - \beta f(x_0) < - \frac{1}{2}\sigma^2 e^{x_0} + k(x_0-\alpha)e^{x_0} + \beta(e^{x_0} - \mu)
+%%\end{equation}
+%%\begin{equation}
+%%- \beta (\mu+\lambda) < - \frac{1}{2}\sigma^2 e^{x_0} + k(x_0-\alpha)e^{x_0} + \beta(e^{x_0} - \mu)
+%%\end{equation}
+%%\begin{equation}
+%%0 < - \frac{1}{2}\sigma^2 e^{x_0} + k(x_0-\alpha)e^{x_0} + \beta(e^{x_0} + \lambda) = t(x_0)
+%%\end{equation}
+%%Contradiction!
+%
+%%Next I want to show when the price is low enough we always inject!
+%%It is easy to show that it is impossible to withdraw when the price is low enough since the \limits PDE left = 0 ,right < 0 which contradicts the definition of withdraw region.
+%% 
+%
+%%\section*{Conclusion}
+%
+%\bibliographystyle{unsrt}
+%
+%\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{amsmath}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\q}{\tilde{q}}
+\newcommand{\x}{\tilde{x}}
+
+%\makeatletter
+%\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+%\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+%
+%\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+%\begin{flushright} % Right align
+%{\LARGE\@title} % Increase the font size of the title
+%
+%\vspace{50pt} % Some vertical space between the title and author name
+%
+%{\large\@author} % Author name
+%\\\@date % Date
+%
+%\vspace{40pt} % Some vertical space between the author block and abstract
+%\end{flushright}
+%}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+%\title{\textbf{Unnecessarily Long Essay Title}\\ % Title
+%Focused and Deliciously Witty Subtitle} % Subtitle
+%
+%\author{\textsc{Ford Prefect} % Author
+%\\{\textit{Interstellar University}}} % Institution
+%
+%\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+%\begin{abstract}
+%
+%\end{abstract}
+%
+%\hspace*{3,6mm}\textit{Keywords:} lorem , ipsum , dolor , sit amet , lectus % Keywords
+%
+%\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+%\section*{Introduction}
+
+\begin{enumerate}
+\item The difference between Shreve and ours.
+
+\begin{enumerate}
+\item  The value function there is homotheticity which is $v(ax,ay) = a^p v(x,y)$. This property makes this problem into a one dimension problem instead of two.
+
+\item The value function there is concave from which the value function is proven to be $C^1$ in the buying stock and selling stock region.
+
+\item The value function is $C^(1,2)$ via the boundary, however, with two equality holds the same time, it is still impossible to solve for the ratio without knowing the expression of the value function( because there is a nonlinear term that can not be eliminated). Unlike this, ours can be solved directly without knowing the value function.
+
+\item We actually assume that $V_{qxx}$ is continuous at the boundary which is not proven in the paper. They only show that $V_x$, $V_{yy}$ are both continuous at the boundary and says nothing about $V_{qxx}$.
+
+\end{enumerate}
+
+
+\item The value functions via solving PDE and simulation are quite similar. I do simulation on 1600 points of one fixed boundary and the results are similar.
+
+\item Since the proof of moving boundary used the $W_{qq}$ and $W_{qxx}$, I want to make sure both of them exist.
+
+\item I want to come back to the constant transaction cost case. 
+
+\begin{enumerate}
+\item In this case, is the analytical way of solving boundary right?
+\item If it is not right, does $W_{qq}$ and $W_{qxx}$ exist?
+\item How to discretize  the PDE in this problem? It is always singular matrix.
+\end{enumerate}
+
+\item Is it possible that this problem can be somehow turned into a one dimensional problem? Maybe not, because the price above average and below average are not the same.
+
+\item I want to do the moving boundary method for this problem right now and check all the things after getting the solution of it.
+
+\end{enumerate}
+
+
+%[rgb]{1,0,0}
+\end{document}

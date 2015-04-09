@@ -1,0 +1,15 @@
+For mark1 
+
+MovingBoundaryXWhole is worse than Markov Chain
+
+For mark2
+
+MovingBoundaryXwhole is worse than Markov Chain
+
+For mark3
+
+MovingBoundaryXWhole is slightly worse than Markov Chain
+
+For mark4
+
+MovingBoundaryXWhole is somewhat good somewhat bad.
