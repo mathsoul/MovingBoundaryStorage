@@ -5,7 +5,8 @@
 % outputs:
 %       array is the array after being reshaped
 
-function array = reshape4disp(vec,NumQ,NumX,NumS)
+function array = Reshape4Disp(vec)
+    global NumQ NumX NumS
     array = reshape(vec,NumQ,NumX,NumS);
     for k = 1:NumS
         array(:,:,k) = flipud(array(:,:,k)');
