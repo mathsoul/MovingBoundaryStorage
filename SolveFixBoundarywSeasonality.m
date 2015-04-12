@@ -1,7 +1,7 @@
 % Function SolvePDEwSeasonality() solve the fixed boundary problem with
 % seasonality
 % Inputs: 
-%           region: the indicator of policies
+%           policy: 2 sell, 1 buy, 0 hold
 % Outputs:
 %           value_function
 %           profit_hold
@@ -9,34 +9,14 @@
 %           profit_buy
 
 
-function [value_function,profit_hold,profit_sell,profit_buy] = SolveFixBoundarywSeasonality(region)
-    
-    global NumX NumQ NumS
-    
-    [~, indexVecQ, indexVecX, indexVecS] = NodeIndex();
-    
-    [A, b] = InitEquation();
+function [value_function,profit_hold,profit_sell,profit_buy] = SolveFixBoundarywSeasonality(policy)
     
     [A_hold,b_hold] = GenerateHoldEquation();
-    [A_sell,b_sell] = GenerateSellEquation();
     [A_buy,b_buy] = GenerateBuyEquation();
-    
-    for ijk=1:NumQ*NumX*NumS
-        i = indexVecQ(ijk);
-        j = indexVecX(ijk);
-        k = indexVecS(ijk);
+    [A_sell,b_sell] = GenerateSellEquation();
 
-        if(region(i,j,k) == 1)
-           A(ijk,:) = A_buy(ijk,:);
-           b(ijk) = b_buy(ijk);
-        elseif(region(i,j,k) == 2)
-            A(ijk,:) = A_sell(ijk,:);
-            b(ijk) = b_sell(ijk);
-        else
-            A(ijk,:)=A_hold(ijk,:);
-            b(ijk) = b_hold(ijk);
-        end
-    end
+    
+    [A,b] = GenerateWholeEquation(policy, A_hold, A_buy, A_sell, b_hold, b_buy, b_sell);
     
     value_functionVec = linsolve(A,b);
     value_function = Reshape4Disp(value_functionVec);

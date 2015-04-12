@@ -1,7 +1,8 @@
 % Function ValueIterwSeasonality() computes the optimal policy from value iteration method 
 %
 % Inputs:
-%           initial_region is set to be all holding
+%           Initial value function is set to be all zeros which can be
+%           achieved by holding all the time.
 %
 % Outputs:
 %           value_function_VI: value function from value iteration
@@ -26,7 +27,7 @@ function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
     converge = 1; %converge or not
     n_iter_VI = 1; %the number of iteration
 
-    while(~converge && n_iter_VI<MaxIteration)
+    while(~converge && n_iter_VI < MaxIteration)
 
         [MC{2},Policy] = max([operator_hold * MC{1} + constant_hold, operator_buy * MC{1} + constant_buy, operator_sell * MC{1} + constant_sell],[],2);
 
