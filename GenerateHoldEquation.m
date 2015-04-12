@@ -19,8 +19,8 @@ function [A_hold,b_hold]= GenerateHoldEquation()
     ds = (Smax - Smin)/(NumS - 1);
     
     QVec = Qmin:dq:Qmax;
-    XVec = Xmin:dq:Xmax;
-    SVec = Smin:dq:Smax;
+    XVec = Xmin:dx:Xmax;
+    SVec = Smin:ds:Smax;
 
     for ijk = 1:NumQ*NumX*NumS
         i = indexVecQ(ijk);

@@ -9,6 +9,6 @@
 function [A,b] = InitEquation()
     global NumQ NumX NumS
     
-    A = eye(NumQ,NumX,NumS);
-    b = zeros(NumQ,NumX,NumS,1);
+    A = eye(NumQ*NumX*NumS);
+    b = zeros(NumQ*NumX*NumS,1);
 end

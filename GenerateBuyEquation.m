@@ -30,7 +30,7 @@ function [A_buy,b_buy]= GenerateBuyEquation()
         x = XVec(j);
         s = SVec(k);
         
-        if(isOnUpperBorder(i,'Q'))
+        if(~isOnUpperBorder(i,'Q'))
             A_buy(ijk,indexMat(i+1,j,k))= -1;
             b_buy(ijk) = - (exp(x + s)*dq + AggregatedBuyingCost(BuyingType,q,q+dq,x+s,Qmax,Qmin,NumQ,BuyingCostPara));
         end
