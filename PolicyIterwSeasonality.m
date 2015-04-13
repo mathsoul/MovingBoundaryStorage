@@ -22,7 +22,7 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
     [operator_sell,constant_sell] = GenerateMCSellOperator();
     
     policy{1} = start_policy;
-    converge = 1; %converge or not
+    converge = 0; %converge or not
     n_iter_PI = 1; %the number of iteration
 
     while(~converge && n_iter_PI < MaxIteration)

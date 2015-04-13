@@ -12,19 +12,15 @@
 function [operator,constant] = GenerateWholeOperator(policy, operator_hold, operator_buy, operator_sell, constant_hold, constant_buy, constant_sell)
     
     global NumQ NumX NumS
-    [~, indexVecQ, indexVecX, indexVecS] = NodeIndex();
     
     [operator, constant] = InitOperator();
     
     for ijk=1:NumQ*NumX*NumS
-        i = indexVecQ(ijk);
-        j = indexVecX(ijk);
-        k = indexVecS(ijk);
 
-        if(policy(i,j,k) == 1)
+        if(policy(ijk) == 1)
            operator(ijk,:) = operator_buy(ijk,:);
            constant(ijk) = constant_buy(ijk);
-        elseif(policy(i,j,k) == 2)
+        elseif(policy(ijk) == 2)
             operator(ijk,:) = operator_sell(ijk,:);
             constant(ijk) = constant_sell(ijk);
         else

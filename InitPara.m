@@ -24,9 +24,9 @@ function InitPara()
 
     beta = 0.5;
 
-    NumX = 3;
-    NumQ = 3;
-    NumS = 3;
+    NumX = 21;
+    NumQ = 21;
+    NumS = 21;
     
     BuyingType = 'reciprocal';
     BuyingCostPara = [0.2,0,-0.2];
@@ -34,7 +34,7 @@ function InitPara()
     SellingType = 'reciprocal';
     SellingCostPara = [0.2,0,-0.2];
     
-    ErrorTol = 1e-1;
-    DiffLevel = 1e-1;
-    MaxIteration = 100;
+    ErrorTol = 1;
+    DiffLevel = 1e-3;
+    MaxIteration = 1000;
 end

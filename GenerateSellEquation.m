@@ -36,6 +36,8 @@ function [A_sell,b_sell]= GenerateSellEquation()
         if(~isOnLowerBorder(i,'Q'))
             A_sell(ijk,indexMat(i-1,j,k)) = -1;
             b_sell(ijk) = exp(x + s) * dq - AggregatedSellingCost(SellingType,q-dq,q,x+s,Qmax,Qmin,NumQ,SellingCostPara);
+        else
+            b_sell(ijk) = - Inf;
         end
     end
 end

@@ -9,26 +9,22 @@
 %           b is the b vec of the whole system
 
 
-function [A,b] = GenerateWholeEquation(region, A_hold, A_buy, A_sell, b_hold, b_buy, b_sell)
+function [A,b] = GenerateWholeEquation(policy, A_hold, A_buy, A_sell, b_hold, b_buy, b_sell)
     
     global NumQ NumX NumS
-    [~, indexVecQ, indexVecX, indexVecS] = NodeIndex();
     
     [A, b] = InitEquation();
     
     for ijk=1:NumQ*NumX*NumS
-        i = indexVecQ(ijk);
-        j = indexVecX(ijk);
-        k = indexVecS(ijk);
 
-        if(region(i,j,k) == 1)
+        if(policy(ijk) == 1)
            A(ijk,:) = A_buy(ijk,:);
            b(ijk) = b_buy(ijk);
-        elseif(region(i,j,k) == 2)
+        elseif(policy(ijk) == 2)
             A(ijk,:) = A_sell(ijk,:);
             b(ijk) = b_sell(ijk);
         else
-            A(ijk,:)=A_hold(ijk,:);
+            A(ijk,:) = A_hold(ijk,:);
             b(ijk) = b_hold(ijk);
         end
     end

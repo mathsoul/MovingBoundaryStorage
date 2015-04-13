@@ -24,7 +24,7 @@ function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
 
 
     MC{1}= zeros(NumQ*NumX*NumS,1);
-    converge = 1; %converge or not
+    converge = 0; %converge or not
     n_iter_VI = 1; %the number of iteration
 
     while(~converge && n_iter_VI < MaxIteration)

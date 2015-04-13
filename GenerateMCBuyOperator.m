@@ -37,6 +37,8 @@ function [operator_buy,constant_buy] = GenerateMCBuyOperator()
         if(~isOnUpperBorder(i,'Q'))
             operator_buy(ijk,indexMat(i+1,j,k)) = 1;
             constant_buy(ijk) = - (exp(x + s)*dq + AggregatedBuyingCost(BuyingType,q,q+dq,x+s,Qmax,Qmin,NumQ,BuyingCostPara));
+        else
+            constant_buy(ijk) = -Inf ;
         end
     end
 end

@@ -18,8 +18,8 @@ function [A_buy,b_buy]= GenerateBuyEquation()
     ds = (Smax - Smin)/(NumS - 1);
     
     QVec = Qmin:dq:Qmax;
-    XVec = Xmin:dq:Xmax;
-    SVec = Smin:dq:Smax;
+    XVec = Xmin:dx:Xmax;
+    SVec = Smin:ds:Smax;
 
     for ijk = 1:NumQ*NumX*NumS
         i = indexVecQ(ijk);
@@ -33,6 +33,8 @@ function [A_buy,b_buy]= GenerateBuyEquation()
         if(~isOnUpperBorder(i,'Q'))
             A_buy(ijk,indexMat(i+1,j,k))= -1;
             b_buy(ijk) = - (exp(x + s)*dq + AggregatedBuyingCost(BuyingType,q,q+dq,x+s,Qmax,Qmin,NumQ,BuyingCostPara));
+        else
+            b_buy(ijk) = - Inf;
         end
     end
 end

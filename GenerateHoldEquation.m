@@ -64,12 +64,10 @@ function [A_hold,b_hold]= GenerateHoldEquation()
             A_hold(ijk,indexMat(i,j-1,k)) = (coef_Vxx/dx^2 - coef_Vx/(2*dx))/(2*coef_Vxx/dx^2 - coef_V);
             A_hold(ijk,indexMat(i,j,k+1)) = coef_Vs/(2*ds)/(2*coef_Vxx/dx^2 - coef_V);
             A_hold(ijk,indexMat(i,j,k-1)) = -coef_Vs/(2*ds)/(2*coef_Vxx/dx^2 - coef_V);
-        elseif(isOnLowerBorader(j,'X'))
-            A_hold(ijk,ijk) = 1;
+        elseif(isOnLowerBorder(j,'X'))
             A_hold(ijk,indexMat(i,j+1,k))= - 0.99;
-        elseif(isOnUpperBorader(j,'X'))
-            A_hold(ijk,ijk) = 1;
-            A_hold(ijk,indexMat(i,j-1,k))= 0.99;
+        elseif(isOnUpperBorder(j,'X'))
+            A_hold(ijk,indexMat(i,j-1,k))= - 0.99;
         elseif(isOnLowerBorder(k,'S'))
             A_hold(ijk,indexMat(i,j+1,k)) = (coef_Vxx/dx^2 + coef_Vx/(2*dx))/(2*coef_Vxx/dx^2 - coef_V + coef_Vs/ds);
             A_hold(ijk,indexMat(i,j-1,k)) = (coef_Vxx/dx^2 - coef_Vx/(2*dx))/(2*coef_Vxx/dx^2 - coef_V + coef_Vs/ds);
