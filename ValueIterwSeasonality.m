@@ -30,7 +30,9 @@ function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
     while(~converge && n_iter_VI < MaxIteration)
 
         [MC{2},Policy] = max([operator_hold * MC{1} + constant_hold, operator_buy * MC{1} + constant_buy, operator_sell * MC{1} + constant_sell],[],2);
-
+        
+        disp(norm(MC{2}-MC{1}))
+        
         if(norm(MC{2}-MC{1}) < ErrorTol)
             converge = 1;
         end

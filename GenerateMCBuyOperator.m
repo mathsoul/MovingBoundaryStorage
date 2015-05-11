@@ -7,7 +7,7 @@
 
 function [operator_buy,constant_buy] = GenerateMCBuyOperator()
     
-    global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS BuyingType BuyingCostPara
+    global Qmax Qmin Xmin Xmax Smin Smax Sratio NumX NumQ NumS BuyingType BuyingCostPara
     
     [operator_buy, constant_buy] = InitOperator();
     
@@ -36,7 +36,8 @@ function [operator_buy,constant_buy] = GenerateMCBuyOperator()
         
         if(~isOnUpperBorder(i,'Q'))
             operator_buy(ijk,indexMat(i+1,j,k)) = 1;
-            constant_buy(ijk) = - (exp(x + s)*dq + AggregatedBuyingCost(BuyingType,q,q+dq,x+s,Qmax,Qmin,NumQ,BuyingCostPara));
+            constant_buy(ijk) = - (exp(x + Sratio * sin(2*pi*s))*dq + ...
+                AggregatedBuyingCost(BuyingType,q,q+dq,x + Sratio *sin(2*pi*s),Qmax,Qmin,NumQ,BuyingCostPara));
         else
             constant_buy(ijk) = -Inf ;
         end

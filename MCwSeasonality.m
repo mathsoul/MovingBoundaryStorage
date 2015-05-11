@@ -8,6 +8,16 @@ disp_optimal_policy_VI = Reshape4Disp(optimal_policy_VI);
 
 disp_optimal_policy_PI = Reshape4Disp(optimal_policy_PI);
 
-policy = reshape(optimal_policy_PI,NumQ,NumX,NumS);
+global NumQ NumX NumS Smin Smax
 
-BoundaryLimit(policy(:,:,21))
+policy = reshape(optimal_policy_PI,NumQ,NumX,NumS);
+ds = (Smax - Smin)/(NumS - 1);
+SVec = Smin:ds:Smax;
+
+for i = NumS:-1:1
+    s = SVec(i);
+    
+    figure
+    BoundaryLimit(policy(:,:,i))
+    title(round(s*2,2))
+end

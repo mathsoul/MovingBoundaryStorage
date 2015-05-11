@@ -16,9 +16,9 @@ function [indexMat,indexVecQ,indexVecX,indexVecS] = NodeIndex()
     indexVecS = zeros(NumQ*NumX*NumS,1); 
 
     for l = 1:NumQ*NumX*NumS
-        indexVecQ(l) = rem(l,NumS);
-        indexVecX(l) = ceil(rem(l,NumS*NumX)/NumS);
-        indexVecS(l) = ceil(l/(NumS * NumX));
+        indexVecQ(l) = rem(l,NumQ);
+        indexVecX(l) = ceil(rem(l,NumQ*NumX)/NumQ);
+        indexVecS(l) = ceil(l/(NumQ * NumX));
     end
 
     indexVecQ(indexVecQ == 0) = NumQ;

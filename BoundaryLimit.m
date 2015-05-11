@@ -1,7 +1,8 @@
 % plotBoundary plots the boundary described in the buyingBoundary and sellingBoundary 
 % function. 
+% buy_upper_limit, buy_lower_limit, sell_upper_limit, sell_lower_limit
 
-function [buy_upper_limit, buy_lower_limit, sell_upper_limit, sell_lower_limit] = ...
+function [] = ...
     BoundaryLimit(policy)
     type = 'fill';
     global Qmax Qmin Xmax Xmin NumX NumQ alpha
@@ -37,6 +38,7 @@ function [buy_upper_limit, buy_lower_limit, sell_upper_limit, sell_lower_limit] 
         XVec(buy_upper_limit(BuyMin:BuyMax)),XVec(buy_lower_limit(BuyMax:-1:BuyMin))];
     SellBound = [QVec(NumQ:-1:SellMin),QVec(SellMin:NumQ);...
         XVec(sell_upper_limit(NumQ:-1:SellMin)),XVec(sell_lower_limit(SellMin:NumQ))];
+   
     
     if strcmp(type,'l')
         p = plot(SellBound(1,:),SellBound(2,:),'g',BuyBound(1,:),BuyBound(2,:),'r'...

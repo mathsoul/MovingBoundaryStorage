@@ -7,7 +7,7 @@
 
 function [operator_sell,constant_sell] = GenerateMCSellOperator()
     
-    global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS SellingType SellingCostPara
+    global Qmax Qmin Xmin Xmax Smin Smax Sratio NumX NumQ NumS SellingType SellingCostPara
     
     [operator_sell, constant_sell] = InitOperator();
     
@@ -35,7 +35,8 @@ function [operator_sell,constant_sell] = GenerateMCSellOperator()
         
         if(~isOnLowerBorder(i,'Q'))
             operator_sell(ijk,indexMat(i-1,j,k)) = 1;
-            constant_sell(ijk) = exp(x + s) * dq - AggregatedSellingCost(SellingType,q-dq,q,x+s,Qmax,Qmin,NumQ,SellingCostPara);
+            constant_sell(ijk) = exp(x + Sratio*sin(2*pi*s)) * dq - ...
+                AggregatedSellingCost(SellingType,q-dq,q,x+Sratio*sin(2*pi*s),Qmax,Qmin,NumQ,SellingCostPara);
         else
             constant_sell(ijk) = -Inf;
         end
