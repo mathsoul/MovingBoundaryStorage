@@ -5,9 +5,9 @@
 
 
 function InitPara()
-    global kappa sigma alpha Qmax Qmin Xmax Xmin Smax Smin beta NumX NumQ...
+    global kappa sigma alpha Qmax Qmin Xmax Xmin Smax Smin Sratio beta NumX NumQ...
         NumS BuyingType BuyingCostPara SellingType SellingCostPara ErrorTol ...
-        DiffLevel MaxIteration
+        DiffLevel MaxIteration 
     
     kappa = 3.4;
     sigma = 0.59;
@@ -19,14 +19,19 @@ function InitPara()
     Xmax = 2.2;
     Xmin = -4;
 
-    Smax = 1;
-    Smin = -1;
-
+    Smax = 5/4;
+    Smin = 1/4;
+    
+    Sratio = 0.1;
+    
     beta = 0.5;
 
     NumX = 21;
     NumQ = 21;
-    NumS = 21;
+    NumS = 13;
+    
+    Smax = Smax - (Smax-Smin)/(NumS-1);
+    NumS = NumS - 1;
     
     BuyingType = 'reciprocal';
     BuyingCostPara = [0.2,0,-0.2];

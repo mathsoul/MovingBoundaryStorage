@@ -1,16 +1,19 @@
 InitPara()
-
-[value_function_VI,optimal_policy_VI,n_iter_VI] = ValueIterwSeasonality();
-
-disp_optimal_policy_VI = Reshape4Disp(optimal_policy_VI);
-
-[value_function_PI,optimal_policy_PI,n_iter_PI] = PolicyIterwSeasonality(optimal_policy_VI);
-
-disp_optimal_policy_PI = Reshape4Disp(optimal_policy_PI);
-
 global NumQ NumX NumS Smin Smax
 
-policy = reshape(optimal_policy_PI,NumQ,NumX,NumS);
+% [value_function_VI,optimal_policy_VI,n_iter_VI] = ValueIterwSeasonality();
+% 
+% disp_optimal_policy_VI = Reshape4Disp(optimal_policy_VI);
+% 
+% [value_function_PI,optimal_policy_PI,n_iter_PI] = PolicyIterwSeasonality(optimal_policy_VI);
+% 
+% disp_optimal_policy_PI = Reshape4Disp(optimal_policy_PI);
+% 
+% 
+% policy = reshape(optimal_policy_PI,NumQ,NumX,NumS);
+% save('policySeasonality.mat','policy');
+load('policySeasonality.mat')
+
 ds = (Smax - Smin)/(NumS - 1);
 SVec = Smin:ds:Smax;
 

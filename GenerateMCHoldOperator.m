@@ -37,32 +37,33 @@ function [operator_hold,constant_hold]= GenerateMCHoldOperator()
         % 1) If alpha > x
         %       (1/2 sigma^2/dx^2 + kappa(alpha - x)/dx) V(i,j+1,k) +
         %       (1/2 sigma^2/dx^2) V(i,j-1,k) + 
-        %       (sqrt(1-s^2)/ds) V(i,j,k+1) =
-        %       (beta + sigma^2/dx^2 + kappa(alpha-x)/dx + sqrt(1-s^2)/ds) V(i,j,k)
+        %       (1/ds) V(i,j,k+1) =
+        %       (beta + sigma^2/dx^2 + kappa(alpha-x)/dx + 1/ds) V(i,j,k)
         
         % 1) If alpha < x
         %       (1/2 sigma^2/dx^2) V(i,j+1,k) +
         %       (1/2 sigma^2/dx^2 + kappa(x - alpha)/dx) V(i,j-1,k) + 
-        %       (sqrt(1-s^2)/ds) V(i,j,k+1) =
-        %       (beta + sigma^2/dx^2 + kappa(x-alpha)/dx + sqrt(1-s^2)/ds) V(i,j,k)
+        %       (1/ds) V(i,j,k+1) =
+        %       (beta + sigma^2/dx^2 + kappa(x-alpha)/dx + 1/ds) V(i,j,k)
         
         c1 = 1/2*sigma^2/dx^2;
         c2 = kappa * abs(alpha - x)/dx;
-        c3 = sqrt(1-s^2)/ds;
+        c3 = 1/ds;
+        
+
         
         if(isInterior(j,'X'))
+            if(~isOnUpperBorder(k,'S'))
+                operator_hold(ijk,indexMat(i,j,k+1)) = c3;
+            else
+                operator_hold(ijk,indexMat(i,j,1)) = c3;
+            end
             if( alpha > x)
                 operator_hold(ijk,indexMat(i,j+1,k)) = (c1 + c2);
                 operator_hold(ijk,indexMat(i,j-1,k)) = (c1);
-                if(~isOnUpperBorder(k,'S'))
-                operator_hold(ijk,indexMat(i,j,k+1)) = c3;
-                end
             else
                 operator_hold(ijk,indexMat(i,j+1,k)) = (c1);
                 operator_hold(ijk,indexMat(i,j-1,k)) = (c1 + c2);
-                if(~isOnUpperBorder(k,'S'))
-                operator_hold(ijk,indexMat(i,j,k+1)) = c3;
-                end
             end
             operator_hold(ijk,:) = operator_hold(ijk,:)/(beta + 2*c1 + c2 + c3);
         elseif(isOnLowerBorder(j,'X'))
