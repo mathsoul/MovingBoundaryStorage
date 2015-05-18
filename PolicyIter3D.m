@@ -21,7 +21,7 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
     [operator_buy,constant_buy] = GenerateMCBuyOperator();
     [operator_sell,constant_sell] = GenerateMCSellOperator();
     
-    policy{1} = start_policy;
+    policy{1} = reshape(start_policy,[NumQ*NumX*NumS,1]);
     converge = 0; %converge or not
     n_iter_PI = 1; %the number of iteration
 
@@ -53,6 +53,9 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
 
     value_function_PI = MC;
     optimal_policy_PI = policy{n_iter_PI};
+    
+    value_function_PI = reshape(value_function_PI,[NumQ,NumX,NumS]);
+    optimal_policy_PI = reshape(optimal_policy_PI,[NumQ,NumX,NumS]);
 end
 
 

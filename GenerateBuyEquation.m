@@ -7,7 +7,7 @@
 
 function [A_buy,b_buy]= GenerateBuyEquation()
     
-   global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS BuyingType BuyingCostPara
+   global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS BuyingType BuyingCostPara Sratio
     
     [A_buy, b_buy] = InitEquation();
     
@@ -32,7 +32,8 @@ function [A_buy,b_buy]= GenerateBuyEquation()
         
         if(~isOnUpperBorder(i,'Q'))
             A_buy(ijk,indexMat(i+1,j,k))= -1;
-            b_buy(ijk) = - (exp(x + s)*dq + AggregatedBuyingCost(BuyingType,q,q+dq,x+s,Qmax,Qmin,NumQ,BuyingCostPara));
+            b_buy(ijk) = - (exp(x + Sratio*sin(2*pi*s))*dq + ...
+                AggregatedBuyingCost(BuyingType,q,q+dq,x+Sratio*sin(2*pi*s),Qmax,Qmin,NumQ,BuyingCostPara));
         else
             b_buy(ijk) = - Inf;
         end

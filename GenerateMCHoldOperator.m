@@ -31,7 +31,7 @@ function [operator_hold,constant_hold]= GenerateMCHoldOperator()
         x = XVec(j);
         s = SVec(k);
                 
-        % 1/2 sigma^2 Vxx + kappa (alpha - x) Vx - beta V + sqrt(1 - s^2) V_s = 0 
+        % 1/2 sigma^2 Vxx + kappa (alpha - x) Vx - beta V + V_s = 0 
         % All the elements in operator_hold should be non-negative
         
         % 1) If alpha > x

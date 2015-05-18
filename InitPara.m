@@ -7,7 +7,7 @@
 function InitPara()
     global kappa sigma alpha Qmax Qmin Xmax Xmin Smax Smin Sratio beta NumX NumQ...
         NumS BuyingType BuyingCostPara SellingType SellingCostPara ErrorTol ...
-        DiffLevel MaxIteration 
+        DiffLevel MaxIteration AbsDiff
     
     kappa = 3.4;
     sigma = 0.59;
@@ -26,8 +26,9 @@ function InitPara()
     
     beta = 0.5;
 
-    NumX = 21;
+    
     NumQ = 21;
+    NumX = 41;
     NumS = 13;
     
     Smax = Smax - (Smax-Smin)/(NumS-1);
@@ -42,4 +43,6 @@ function InitPara()
     ErrorTol = 1;
     DiffLevel = 1e-3;
     MaxIteration = 1000;
+    
+    AbsDiff = 0.1;
 end

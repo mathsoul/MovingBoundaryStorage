@@ -9,9 +9,11 @@
 %           b is the b vec of the whole system
 
 
-function [A,b] = GenerateWholeEquation(policy, A_hold, A_buy, A_sell, b_hold, b_buy, b_sell)
+function [A,b] = GenerateWholeEquation(policy)
     
-    global NumQ NumX NumS
+    global NumQ NumX NumS A_hold b_hold A_buy b_buy A_sell b_sell
+    
+    policy = reshape(policy,[NumQ*NumX*NumS,1]);
     
     [A, b] = InitEquation();
     
@@ -27,4 +29,5 @@ function [A,b] = GenerateWholeEquation(policy, A_hold, A_buy, A_sell, b_hold, b_
             b(ijk) = b_hold(ijk);
         end
     end
+    A = sparse(A);
 end

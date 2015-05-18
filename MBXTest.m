@@ -58,8 +58,8 @@ SellingCostPara = [0.2,0,-0.2];
 % SellingCostPara = [0.02,0.05,-0.1]; 
 
 
-NumX = 51;
-NumQ = 51;
+NumX = 21;
+NumQ = 21;
 
 %% Move the boundary along X one by one.
 

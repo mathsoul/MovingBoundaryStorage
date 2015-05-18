@@ -60,15 +60,15 @@ b0 = 1/2;
 
 %% Calculate the transaction cost
 
-lambda = zeros(NumQ,NumX);
-mu = zeros(NumQ,NumX);
-
-for i = 1 : NumQ
-    for j = 1 : NumX
-        lambda(i,j) = buyingCost(BuyingType,QVec(i),XVec(j),Qmin,Qmax,BuyingCostPara);
-        mu(i,j) = sellingCost(SellingType,QVec(i),XVec(j),Qmin,Qmax,SellingCostPara);
-    end
-end
+% lambda = zeros(NumQ,NumX);
+% mu = zeros(NumQ,NumX);
+% 
+% for i = 1 : NumQ
+%     for j = 1 : NumX
+%         lambda(i,j) = buyingCost(BuyingType,QVec(i),XVec(j),Qmin,Qmax,BuyingCostPara);
+%         mu(i,j) = sellingCost(SellingType,QVec(i),XVec(j),Qmin,Qmax,SellingCostPara);
+%     end
+% end
 
 
 %% Create Node index

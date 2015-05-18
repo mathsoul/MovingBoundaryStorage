@@ -44,7 +44,9 @@ function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
 
     value_function_VI = MC{1};
     optimal_policy_VI = Policy - 1;
-
+    
+    value_function_VI = reshape(value_function_VI,[NumQ,NumX,NumS]);
+    optimal_policy_VI = reshape(optimal_policy_VI,[NumQ,NumX,NumS]);
 end
 
 

@@ -7,7 +7,7 @@
 
 function [A_sell,b_sell]= GenerateSellEquation()
     
-   global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS SellingType SellingCostPara
+   global Qmax Qmin Xmin Xmax Smin Smax NumX NumQ NumS SellingType SellingCostPara Sratio
     
     [A_sell, b_sell] = InitEquation();
     
@@ -35,7 +35,8 @@ function [A_sell,b_sell]= GenerateSellEquation()
         
         if(~isOnLowerBorder(i,'Q'))
             A_sell(ijk,indexMat(i-1,j,k)) = -1;
-            b_sell(ijk) = exp(x + s) * dq - AggregatedSellingCost(SellingType,q-dq,q,x+s,Qmax,Qmin,NumQ,SellingCostPara);
+            b_sell(ijk) = exp(x + Sratio*sin(2*pi*s)) * dq - ...
+                AggregatedSellingCost(SellingType,q-dq,q,x+Sratio*sin(2*pi*s),Qmax,Qmin,NumQ,SellingCostPara);
         else
             b_sell(ijk) = - Inf;
         end

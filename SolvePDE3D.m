@@ -1,18 +1,12 @@
 function [value_function,profit_hold,profit_buy,profit_sell] = SolvePDE3D(policy)
     
-    global NumQ NumX NumS
+    global NumQ NumX NumS A_hold b_hold A_buy b_buy A_sell b_sell
     
     policy = reshape(policy,[NumQ*NumX*NumS,1]);
-    
-    [A_hold,b_hold] = GenerateHoldEquation();
-    [A_buy,b_buy] = GenerateBuyEquation();
-    [A_sell,b_sell] = GenerateSellEquation();
-
         
-    [A, b] = GenerateWholeEquation(policy, ...
-        A_hold, A_buy, A_sell, b_hold, b_buy, b_sell);
+    [A, b] = GenerateWholeEquation(policy);
         
-    value_function_vec = linsolve(A, b);
+    value_function_vec = A\b;
     
     value_function = reshape(value_function_vec,NumQ,NumX,NumS);
     

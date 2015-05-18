@@ -9,6 +9,6 @@
 function [A,b] = InitEquation()
     global NumQ NumX NumS
     
-    A = eye(NumQ*NumX*NumS);
+    A = sparse(1:NumQ*NumX*NumS,1:NumQ*NumX*NumS,1);
     b = zeros(NumQ*NumX*NumS,1);
 end
