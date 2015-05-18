@@ -14,7 +14,7 @@
 
 
 function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
-    PolicyIterwSeasonality(start_policy)
+    PolicyIter3D(start_policy)
     global NumQ NumX NumS MaxIteration ErrorTol DiffLevel
     
     [operator_hold,constant_hold] = GenerateMCHoldOperator();

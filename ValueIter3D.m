@@ -15,7 +15,7 @@
 
 
 function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
-    ValueIterwSeasonality()
+    ValueIter3D()
     global NumX NumQ NumS MaxIteration ErrorTol
     
     [operator_hold,constant_hold] = GenerateMCHoldOperator();

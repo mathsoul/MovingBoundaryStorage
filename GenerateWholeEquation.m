@@ -16,7 +16,6 @@ function [A,b] = GenerateWholeEquation(policy, A_hold, A_buy, A_sell, b_hold, b_
     [A, b] = InitEquation();
     
     for ijk=1:NumQ*NumX*NumS
-
         if(policy(ijk) == 1)
            A(ijk,:) = A_buy(ijk,:);
            b(ijk) = b_buy(ijk);
