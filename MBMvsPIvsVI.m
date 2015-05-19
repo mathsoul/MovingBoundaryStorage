@@ -2,6 +2,7 @@ load('VI.mat')
 load('PI.mat')
 % load('MBM_0.1.mat')
 % load('MBM.mat')
+InitPara()
 global NumS Smin Smax
 
 ds = (Smax - Smin)/(NumS - 1);
@@ -13,13 +14,14 @@ for i = NumS:-1:1
 %     figure
 %     BoundaryLimit(MBM_policy(:,:,i))
 %     title({'MBM',round(s*2,2)})
+
     
     figure
-    BoundaryLimit(optimal_policy_VI(:,:,i))
+    BoundaryLimit(policy_VI(:,:,i))
     title({'VI',round(s*2,2)})
     
     figure
-    BoundaryLimit(optimal_policy_PI(:,:,i))
+    BoundaryLimit(policy_PI(:,:,i))
     title({'PI',round(s*2,2)})
 end
 
