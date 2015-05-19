@@ -16,8 +16,10 @@ function cost = AggregatedSellingCost(Type,qlower,qupper,x,Qmax,Qmin,NumQ,CostPa
         if CostPara(2) == 0 && qlower == Qmin % To avoid infinite transaction cost
             dq = (Qmax - Qmin)/(NumQ - 1);
             cost = AggregatedSellingCost(Type,Qmin+dq,qupper,x,Qmax,Qmin,NumQ,CostPara) + dq * (CostPara(1) * (Qmax - Qmin)/dq + CostPara(3));
+            cost = cost*exp(x);
         else
             cost = CostPara(1) * (Qmax-Qmin+CostPara(2)) * log((qupper - Qmin +CostPara(2)) /(qlower - Qmin + CostPara(2))) + CostPara(3)*(qupper - qlower);
+            cost = cost*exp(x);
         end
     else
         error(2,'The transaction type is not included.')

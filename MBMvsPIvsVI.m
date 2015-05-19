@@ -1,6 +1,6 @@
 load('VI.mat')
 load('PI.mat')
-load('MBM_0.1.mat')
+% load('MBM_0.1.mat')
 % load('MBM.mat')
 global NumS Smin Smax
 
@@ -10,9 +10,9 @@ SVec = Smin:ds:Smax;
 for i = NumS:-1:1
     s = SVec(i);
     
-    figure
-    BoundaryLimit(MBM_policy(:,:,i))
-    title({'MBM',round(s*2,2)})
+%     figure
+%     BoundaryLimit(MBM_policy(:,:,i))
+%     title({'MBM',round(s*2,2)})
     
     figure
     BoundaryLimit(optimal_policy_VI(:,:,i))
@@ -23,5 +23,5 @@ for i = NumS:-1:1
     title({'PI',round(s*2,2)})
 end
 
-mean(mean(mean(value_function_MBM-value_function_PI)))
-mean(mean(mean(value_function_MBM-value_function_PI)))/mean(mean(mean(value_function_PI)))
+% mean(mean(mean(value_function_MBM-value_function_PI)))
+% mean(mean(mean(value_function_MBM-value_function_PI)))/mean(mean(mean(value_function_PI)))
