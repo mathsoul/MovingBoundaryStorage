@@ -7,7 +7,7 @@
 function InitPara()
     global kappa sigma alpha Qmax Qmin Xmax Xmin Smax Smin Sratio beta NumX NumQ...
         NumS BuyingType BuyingCostPara SellingType SellingCostPara ErrorTol ...
-        DiffLevel MaxIteration AbsDiff
+        DiffLevel MaxIteration AbsDiff CostPriceRatio
     
     kappa = 3.4;
     sigma = 0.59;
@@ -45,4 +45,6 @@ function InitPara()
     MaxIteration = 1000;
     
     AbsDiff = 0.1;
+    
+    CostPriceRatio = 0.1;
 end
