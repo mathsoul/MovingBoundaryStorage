@@ -42,6 +42,9 @@ policy_MBM = new_policy{counter};
 value_function_MBM = value_function{counter};
 save(sprintf('MBM_%.1f.mat', AbsDiff),'policy_MBM','value_function_MBM');
 
+policy_MBM = new_policy;
+value_function_MBM = value_function;
+save(sprintf('MBM_policy_seq%.1f.mat', AbsDiff),'policy_MBM','value_function_MBM');
 
 % for j = 1:length(new_policy)
 %     figure

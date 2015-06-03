@@ -27,7 +27,7 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
 
     while(~converge && n_iter_PI < MaxIteration)
         
-        [operator, constant] = GenerateWholeOperator(policy{1}, ...
+        [operator, constant] = GenerateWholeOperator(policy{n_iter_PI}, ...
             operator_hold, operator_buy, operator_sell, constant_hold, ...
             constant_buy, constant_sell);
         
@@ -52,10 +52,14 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
     end
 
     value_function_PI = MC;
-    optimal_policy_PI = policy{n_iter_PI};
+%     optimal_policy_PI = policy{n_iter_PI};
+    optimal_policy_PI = policy;
+    for i = 1:n_iter_PI
+        optimal_policy_PI{i} = reshape(optimal_policy_PI{i},[NumQ,NumX,NumS]);
+    end
     
     value_function_PI = reshape(value_function_PI,[NumQ,NumX,NumS]);
-    optimal_policy_PI = reshape(optimal_policy_PI,[NumQ,NumX,NumS]);
+%     optimal_policy_PI = reshape(optimal_policy_PI,[NumQ,NumX,NumS]);
 end
 
 
