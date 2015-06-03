@@ -28,9 +28,17 @@ diff_V_MBM = zeros(1,n_MBM);
 for i = 1:n_MBM
     diff_V_MBM(i) = log(norm(reshape(value_function_MBM{i}-optimal_value,[NumQ*NumX*NumS,1]),Inf));
 end
-
+% Plot value difference vs # iteration
 plot(1:(n_MBM+1),[diff_V_initial,diff_V_MBM],'k')
 hold on
 plot(1:n_PI,[diff_V_initial,diff_V_PI],'b')
 hold off
 title('log inf norm')
+
+% How MBM moves
+for i = 1:n_MBM
+    
+    figure
+    BoundaryLimit(policy_MBM{i}(:,:,1))
+    title(i)
+end
