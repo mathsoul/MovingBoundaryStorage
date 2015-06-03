@@ -1,4 +1,9 @@
 InitPara()
+global A_hold b_hold A_buy b_buy A_sell b_sell
+[A_hold,b_hold] = GenerateHoldEquation();
+[A_buy,b_buy] = GenerateBuyEquation();
+[A_sell,b_sell] = GenerateSellEquation();
+
 global NumQ NumX NumS
 
 load('PI_policy_seq.mat')
