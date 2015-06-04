@@ -16,8 +16,8 @@ function InitPara()
     Qmax = 100;
     Qmin = 0;
 
-    Xmax = 2.2;
-    Xmin = -4;
+    Xmax = 1;
+    Xmin = 0;
 
     Smax = 5/4;
     Smin = 1/4;
@@ -28,7 +28,7 @@ function InitPara()
 
     
     NumQ = 21;
-    NumX = 41;
+    NumX = 21;
     NumS = 13;
     
     Smax = Smax - (Smax-Smin)/(NumS-1);
@@ -44,7 +44,7 @@ function InitPara()
     DiffLevel = 1e-3;
     MaxIteration = 1000;
     
-    AbsDiff = 0.1;
+    AbsDiff = 0.0;
     
     CostPriceRatio = 0.1;
 end

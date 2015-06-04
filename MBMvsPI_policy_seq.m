@@ -7,7 +7,7 @@ global A_hold b_hold A_buy b_buy A_sell b_sell
 global NumQ NumX NumS
 
 load('PI_policy_seq.mat')
-load('MBM_policy_seq0.1.mat')
+load('MBM_policy_seq0.0.mat')
 
 n_PI = length(policy_PI);
 n_MBM = length(policy_MBM);
@@ -29,16 +29,38 @@ for i = 1:n_MBM
     diff_V_MBM(i) = log(norm(reshape(value_function_MBM{i}-optimal_value,[NumQ*NumX*NumS,1]),Inf));
 end
 % Plot value difference vs # iteration
-plot(1:(n_MBM+1),[diff_V_initial,diff_V_MBM],'k')
-hold on
-plot(1:n_PI,[diff_V_initial,diff_V_PI],'b')
-hold off
+fig_conv_rate = figure;
+plot(1:(n_MBM+1),[diff_V_initial,diff_V_MBM],'k',1:n_PI,[diff_V_initial,diff_V_PI],'b')
 title('log inf norm')
+legend('MBM','PI')
+print(fig_conv_rate,'MBM vs PI','-dpng')
+close all 
 
 % How MBM moves
+
+clear m
+
 for i = 1:n_MBM
-    
     figure
     BoundaryLimit(policy_MBM{i}(:,:,1))
     title(i)
+    m(i) = getframe;
 end
+
+movie2avi(m,'MBM_3D.avi','compression','none','fps',3)
+
+close all
+
+% how PI moves
+clear m
+
+for i = 1:n_PI
+    figure
+    BoundaryLimit(policy_PI{i}(:,:,1))
+    title(i)
+    m(i) = getframe;
+end
+
+movie2avi(m,'PI_3D.avi','compression','none','fps',3)
+
+close all

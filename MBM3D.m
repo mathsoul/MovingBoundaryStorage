@@ -37,6 +37,7 @@ while norm3D(new_policy{counter}-old_policy)>0
    old_policy = new_policy{counter -2};
 end
 
+clear policy_MBM
 
 policy_MBM = new_policy{counter};   
 value_function_MBM = value_function{counter};
