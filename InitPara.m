@@ -16,7 +16,7 @@ function InitPara()
     Qmax = 100;
     Qmin = 0;
 
-    Xmax = 1;
+    Xmax = 1.5;
     Xmin = 0;
 
     Smax = 5/4;

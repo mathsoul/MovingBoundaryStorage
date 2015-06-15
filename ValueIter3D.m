@@ -15,35 +15,43 @@
 
 
 function [value_function_VI,optimal_policy_VI,n_iter_VI] = ...
-    ValueIter3D()
+    ValueIter3D(start_policy)
     global NumX NumQ NumS MaxIteration ErrorTol
     
     [operator_hold,constant_hold] = GenerateMCHoldOperator();
     [operator_buy,constant_buy] = GenerateMCBuyOperator();
     [operator_sell,constant_sell] = GenerateMCSellOperator();
-
-
-    MC{1}= zeros(NumQ*NumX*NumS,1);
+    
+    policy{1} = start_policy;
+    
+    [operator, constant] = GenerateWholeOperator(policy{1}, ...
+    operator_hold, operator_buy, operator_sell, constant_hold, ...
+    constant_buy, constant_sell);
+    
+    policy{1} = reshape(policy{1},[NumQ*NumX*NumS,1]);
+    MC{1} = linsolve(eye(NumQ*NumX*NumS) - operator, constant);
+   
     converge = 0; %converge or not
     n_iter_VI = 1; %the number of iteration
 
     while(~converge && n_iter_VI < MaxIteration)
 
-        [MC{2},Policy] = max([operator_hold * MC{1} + constant_hold, operator_buy * MC{1} + constant_buy, operator_sell * MC{1} + constant_sell],[],2);
+        [MC{2},policy{2}] = max([operator_hold * MC{1} + constant_hold, operator_buy * MC{1} + constant_buy, operator_sell * MC{1} + constant_sell],[],2);
         
-        disp(norm(MC{2}-MC{1}))
+        disp(norm(policy{2}-policy{1}))
         
-        if(norm(MC{2}-MC{1}) < ErrorTol)
+        if(norm(policy{2}-policy{1}) < ErrorTol)
             converge = 1;
         end
 
         MC{1} = MC{2};
-
+        policy{1} = policy{2};
+        
         n_iter_VI = n_iter_VI + 1;
     end
 
     value_function_VI = MC{1};
-    optimal_policy_VI = Policy - 1;
+    optimal_policy_VI = policy{1} - 1;
     
     value_function_VI = reshape(value_function_VI,[NumQ,NumX,NumS]);
     optimal_policy_VI = reshape(optimal_policy_VI,[NumQ,NumX,NumS]);

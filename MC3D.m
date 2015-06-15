@@ -1,6 +1,9 @@
 InitPara()
 
-% [~,policy_VI,n_iter_VI] = ValueIter3D();
+% global NumQ NumX NumS
+
+% start_policy = zeros(NumQ,NumX,NumS);
+% [~,policy_VI,n_iter_VI] = ValueIter3D(start_policy);
 
 initial_policy = InitMBMPolicy();
 % initial_policy = zeros(21,41,12);

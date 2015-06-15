@@ -43,7 +43,7 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
             end
         end
         
-        
+        disp(norm(policy{n_iter_PI + 1} - policy{n_iter_PI}))
         if(norm(policy{n_iter_PI + 1} - policy{n_iter_PI}) < ErrorTol)
             converge = 1;
         end
