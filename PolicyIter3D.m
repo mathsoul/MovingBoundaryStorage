@@ -36,7 +36,7 @@ function [value_function_PI,optimal_policy_PI,n_iter_PI] = ...
         [max_value,which_max] = max([operator_hold * MC + constant_hold, operator_buy * MC + constant_buy, operator_sell * MC + constant_sell],[],2);
         
         for ijk = 1:NumQ*NumX*NumS
-            if( max_value(ijk) > ( 1+ DiffLevel) * MC(ijk))
+            if( max_value(ijk) >  MC(ijk)) % ( 1+ DiffLevel) *
                 policy{n_iter_PI+1}(ijk,1) = which_max(ijk) - 1;
             else
                 policy{n_iter_PI+1}(ijk,1) = policy{n_iter_PI}(ijk,1);

@@ -7,7 +7,7 @@ global A_hold b_hold A_buy b_buy A_sell b_sell
 global NumQ NumX NumS
 
 load('PI_policy_seq.mat')
-load('MBM_policy_seq0.0.mat')
+load('MBM_policy_seq.mat')
 
 n_PI = length(policy_PI);
 n_MBM = length(policy_MBM);
