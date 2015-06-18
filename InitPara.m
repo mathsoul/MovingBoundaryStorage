@@ -16,20 +16,20 @@ function InitPara()
     Qmax = 100;
     Qmin = 0;
 
-    Xmax = 1.5;
-    Xmin = 0;
+    Xmax = 1;
+    Xmin = 0.2;
 
     Smax = 5/4;
     Smin = 1/4;
     
-    Sratio = 0.1;
+    Sratio = 0.0;
     
     beta = 0.5;
 
     
-    NumQ = 21;
-    NumX = 21;
-    NumS = 13;
+    NumQ = 41;
+    NumX = 41;
+    NumS = 4;
     
     Smax = Smax - (Smax-Smin)/(NumS-1);
     NumS = NumS - 1;

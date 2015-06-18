@@ -12,6 +12,8 @@ old_policy = initial_policy;
 
 [value_function{1},profit_hold{1},profit_buy{1},profit_sell{1}] = SolvePDE3D(old_policy);  
 
+clear new_policy
+
 new_policy{1} = MoveBoundaryAlongX3D(old_policy,profit_buy{1},profit_sell{1},'sell');
 
 counter = 1;
