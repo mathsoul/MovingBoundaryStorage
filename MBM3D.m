@@ -1,6 +1,6 @@
 InitPara()
 
-global A_hold b_hold A_buy b_buy A_sell b_sell AbsDiff
+global A_hold b_hold A_buy b_buy A_sell b_sell AbsDiff NumX
 [A_hold,b_hold] = GenerateHoldEquation();
 [A_buy,b_buy] = GenerateBuyEquation();
 [A_sell,b_sell] = GenerateSellEquation();
@@ -57,3 +57,10 @@ save(sprintf('MBM_policy_seq%.1f.mat', AbsDiff),'policy_MBM','value_function_MBM
 %     hold off
 % end
 
+% Analysis
+profit_hold_vs_policy = zeros(NumX,2*floor((counter-1)/2));
+
+for i = linspace(3,counter,floor((counter-1)/2))
+    profit_hold_vs_policy(:,i-2) = profit_hold{i}(1,:,1) - profit_hold{i-1}(1,:,1);
+    profit_hold_vs_policy(:,i-1) = policy_MBM{i}(1,:,1);
+end     
