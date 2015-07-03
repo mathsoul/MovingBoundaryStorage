@@ -100,3 +100,24 @@ end
 movie2avi(m,'PI_3D.avi','compression','none','fps',3)
 
 close all
+
+% how PI condition on value function increases moves
+
+load('PI_policy_seq_cond.mat')
+clear m
+
+for i = 1:n_PI
+    figure
+    BoundaryLimit(policy_PI{i}(:,:,1))
+    title(i)
+    m(i) = getframe;
+end
+
+movie2avi(m,'PI_3D_cond.avi','compression','none','fps',3)
+
+close all
+
+% if the PI value function is increasing
+for i = 1:(n_PI-1)
+   all(all(all(value_function_PI{i+1}>=value_function_PI{i})))
+end
