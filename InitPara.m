@@ -27,8 +27,8 @@ function InitPara()
     beta = 0.5;
 
     
-    NumQ = 41;
-    NumX = 41;
+    NumQ = 81;
+    NumX = 81;
     NumS = 4;
     
     Smax = Smax - (Smax-Smin)/(NumS-1);
