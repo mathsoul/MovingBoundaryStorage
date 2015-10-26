@@ -205,11 +205,11 @@ Data comes from NYMEX.
       \item Mean reversion:  Gibson and Schwartz (1990); Brennan and Hughes (1991); Cortazar and Schwartz (1994); Bessembinder, Coughenour, Seguin, Smoller (1995);
       \item Price Dyanmics: Schwartz (1997); Schwartz and Smith (2000);
       \end{itemize}
-  \item Valuation of storage: \small{Fackler and Livingston (2002); Manoliu (2004); Hodges (2004); Chen and Forsyth (2008,2010); Boogert and Jong (2008); Matt, Davison and Rasmussen (2009); Secomandi (2010,2014); }
+  \item Valuation of storage: \small{Fackler and Livingston (2002); Manoliu (2004); Hodges (2004); Chen and Forsyth (2008, 2010); Boogert and Jong (2008); Matt, Davison and Rasmussen (2009); Secomandi (2010, 2014); Zhao and Wijnbergen (2015)	}
   %No one model it as a singular control problem with non-trivial transaction cost.
   %No one used moving boundary method neither.
   
-  \item Moving boundary method: \small{Muthuraman and Kumar (2006); Chockalingam and Muthuraman (2007,2010); Muthuraman and Zha (2008); Feng and Muthuraman (2010); }
+  \item Moving boundary method: \small{Muthuraman and Kumar (2006); Chockalingam and Muthuraman (2007, 2010, 2014); Muthuraman and Zha (2008); Feng and Muthuraman (2010); }
 \end{itemize}
 
 \end{frame}
@@ -329,9 +329,9 @@ Now at $(x_0,q_0)$, $\epsilon$ is bought at price $e^{x_0}$. The average buying 
 
 \begin{itemize}
   \item The state space $(x,q) \in \mathbb{R}^2_+$ is divided into three kinds of regions.
-  \item Holding region: holding profit = 0, selling \& buying profit $<0$
-  \item Selling region: selling profit = 0, holding \& buying profit $<0$ 
-  \item Buying region: buying profit = 0, holding \& selling profit $<0$
+  \item {\small Holding region $H^*$: holding profit = 0, selling \& buying profit $<0$}
+  \item {\small Selling region $S^*$: selling profit = 0, holding \& buying profit $<0$}
+  \item {\small Buying region $B^*$: buying profit = 0, holding \& selling profit $<0$}
 \end{itemize}
 
 \end{frame}
@@ -376,28 +376,6 @@ When the price is high enough, regardless of storage, selling is the optimal str
 
 \end{frame}
 
-
-
-\begin{frame}
-{\bf The Structure of Optimal Boundary}
-
-\begin{columns}
-  \column{0.5\textwidth}
-  \begin{figure}[hbt]
-  \includegraphics[scale = 0.25]{wonthappen.eps}
-  \caption{This won't happen}
-  \end{figure}
-  \column{0.5\textwidth} 
-   \begin{theorem}
-    Under optimal policy, there won't exist $x$ and $q_1 \neq q_2$ such that buying happens at $(x,q_1)$ while selling happens at $(x,q_2)$.
-    \end{theorem}
-\end{columns}
-%Move the fixed boundary problem here. As long as fixed problem is easy to solve, we can use moving boundary method.
-
-
-%\only<1>{Long: Transaction cost will only change selling(buying) to holding. It won't change selling to buying or reverse.}
-\end{frame}
-
 \section{Moving Boundary Method}
 \begin{frame}
 {\bf The Moving Boundary Method}
@@ -431,7 +409,7 @@ When the price is high enough, regardless of storage, selling is the optimal str
 {\bf Algorithm}
 \begin{enumerate}
   \item Begin with selling at very high price for all $q>0$.
-  \item Move selling and buying boundaries along price $x$ alternatively until convergence. 
+  \item Move selling and buying boundaries along price $x$ until convergence. 
 %  \begin{itemize}
 %  \item  The initial guess of buying is generated in this procedure.
 %  \item  Each time move to the point that generates highest positive profit.
@@ -528,11 +506,9 @@ When the price is high enough, regardless of storage, selling is the optimal str
 
 \begin{frame}
 {\bf Distance}
-% Check the result with Kumar. Is the maximum point is moved to.
-Because there is \textit{No Coming Back}, overshooting must be avoided. \\
+
 
 {\large Sell}
-%todo： put a black dot in the graph and an arrow there.
 \begin{columns}
 \column{0.5\textwidth}
 %\only<1>{
@@ -593,15 +569,9 @@ Each movement improves value function.
 \end{Theorem}
 \begin{columns}
    \column{0.5\textwidth} 
-  \begin{figure}[hbt]
-  \includegraphics[scale = 0.4]{0Converge.eps}
-  \caption{Initial Guess}
-  \end{figure}
+   Add the theorem.
   \column{0.5\textwidth}
-  \begin{figure}[hbt]
-  \includegraphics[scale = 0.4]{9Converge.eps}
-  \caption{Initial Guess}
-\end{figure}
+	Here adds the figure shows what's the definition of sets $H^{n+1}...$
 \end{columns}
 
 \end{frame}
@@ -614,6 +584,8 @@ Each movement improves value function.
 \begin{Theorem}
 The boundaries can be kept moving.
 \end{Theorem}
+
+Add some intuition about this.
 \end{frame}
 
 
@@ -621,7 +593,7 @@ The boundaries can be kept moving.
 {\bf Extensions}
 
 \begin{itemize}
-  \item Seasonality and Finite time.
+  \item Seasonality.
   \item Storage cost.
   \item Random injection and withdrawal.
 \end{itemize}

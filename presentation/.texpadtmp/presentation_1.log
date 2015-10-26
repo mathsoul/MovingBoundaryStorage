@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 NOV 2014 19:03
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.5.30)  26 OCT 2015 10:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -14,18 +14,18 @@ Document Class: beamer 2013/01/04 3.26 A class for typesetting presentations (rc
 (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 Package: beamerbasemodes 2012/04/15 (rcs-revision cc6557182d97)
 \beamer@tempbox=\box26
-\beamer@tempcount=\count79
-\c@beamerpauses=\count80
+\beamer@tempcount=\count80
+\c@beamerpauses=\count81
  (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
 Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
-\beamer@slideinframe=\count81
-\beamer@minimum=\count82
+\beamer@slideinframe=\count82
+\beamer@minimum=\count83
 )
 \beamer@commentbox=\box27
-\beamer@modecount=\count83
+\beamer@modecount=\count84
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 )
 \headheight=\dimen102
 \headdp=\dimen103
@@ -51,24 +51,24 @@ Package ifpdf Info: pdfTeX in PDF mode is detected.
 \beamer@sectionbox=\box31
 \beamer@logobox=\box32
 \beamer@linebox=\box33
-\beamer@sectioncount=\count84
-\beamer@subsubsectionmax=\count85
-\beamer@subsectionmax=\count86
-\beamer@sectionmax=\count87
-\beamer@totalheads=\count88
-\beamer@headcounter=\count89
-\beamer@partstartpage=\count90
-\beamer@sectionstartpage=\count91
-\beamer@subsectionstartpage=\count92
-\beamer@animationtempa=\count93
-\beamer@animationtempb=\count94
-\beamer@xpos=\count95
-\beamer@ypos=\count96
-\beamer@showpartnumber=\count97
-\beamer@currentsubsection=\count98
-\beamer@coveringdepth=\count99
-\beamer@sectionadjust=\count100
-\beamer@tocsectionnumber=\count101
+\beamer@sectioncount=\count85
+\beamer@subsubsectionmax=\count86
+\beamer@subsectionmax=\count87
+\beamer@sectionmax=\count88
+\beamer@totalheads=\count89
+\beamer@headcounter=\count90
+\beamer@partstartpage=\count91
+\beamer@sectionstartpage=\count92
+\beamer@subsectionstartpage=\count93
+\beamer@animationtempa=\count94
+\beamer@animationtempb=\count95
+\beamer@xpos=\count96
+\beamer@ypos=\count97
+\beamer@showpartnumber=\count98
+\beamer@currentsubsection=\count99
+\beamer@coveringdepth=\count100
+\beamer@sectionadjust=\count101
+\beamer@tocsectionnumber=\count102
  (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
 Package: beamerbaseoptions 2010/04/27 (rcs-revision 982469101dd6)
  (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
@@ -85,9 +85,9 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
+\Gm@cnth=\count103
+\Gm@cntv=\count104
+\c@Gm@tempcnt=\count105
 \Gm@bindingoffset=\dimen119
 \Gm@wd@mp=\dimen120
 \Gm@odd@mp=\dimen121
@@ -108,15 +108,9 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
- (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count105
+Package graphics Info: Driver file: xetex.def on input line 91.
+ (/usr/local/texlive/2013/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2013/04/29 v0.96 LaTeX color/graphics driver for XeTeX (RRM/JK)
 ))
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
@@ -153,12 +147,14 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
  (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
- (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+Package pgfsys Info: Driver file for pgf: pgfsys-xetex.def on input line 900.
+ (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2010/02/16  (rcs-revision 1.3)
+ (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf-via-dvi.def
+File: pgfsys-common-pdf-via-dvi.def 2008/05/19  (rcs-revision 1.7)
 ))) (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count110
@@ -170,9 +166,8 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
  (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: xetex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -264,8 +259,8 @@ Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
  (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
@@ -280,9 +275,10 @@ Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
 Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
@@ -348,16 +344,29 @@ Package hyperref Message: Stopped early.
 
 )
 
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Message: Driver (autodetected): hxetex.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count124
-\c@bookmark@seq@number=\count125
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2012/11/06 v6.83m Hyperref driver for XeTeX
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box40
+\c@Hy@AnnotLevel=\count124
+\HyField@AnnotCount=\count125
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
  (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
-)) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+(rerunfilecheck)             Therefore file contents cannot be checked efficiently
+(rerunfilecheck)             and the loading of the package is aborted.
+)) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
 Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
  (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty
 Package: beamerbasecompatibility 2012/05/01  (rcs-revision 67c48b3b652d)
@@ -382,66 +391,67 @@ Package: beamerbasemisc 2012/02/24  (rcs-revision 2ff5461be705)
 Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
 Package: beamerbaseoverlay 2012/11/11  (rcs-revision 6afbc49b1109)
-\beamer@argscount=\count126
+\beamer@argscount=\count128
 \beamer@lastskipcover=\skip44
-\beamer@trivlistdepth=\count127
+\beamer@trivlistdepth=\count129
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
 Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasesection.sty
 Package: beamerbasesection 2013/01/04  (rcs-revision 54309ceef997)
-\c@lecture=\count128
-\c@part=\count129
-\c@section=\count130
-\c@subsection=\count131
-\c@subsubsection=\count132
+\c@lecture=\count130
+\c@part=\count131
+\c@section=\count132
+\c@subsection=\count133
+\c@subsubsection=\count134
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
 Package: beamerbaseframe 2012/12/26  (rcs-revision 1443917db2cf)
-\beamer@framebox=\box40
-\beamer@frametitlebox=\box41
-\beamer@zoombox=\box42
-\beamer@zoomcount=\count133
-\beamer@zoomframecount=\count134
+\beamer@framebox=\box41
+\beamer@frametitlebox=\box42
+\beamer@zoombox=\box43
+\beamer@zoomcount=\count135
+\beamer@zoomframecount=\count136
 \beamer@frametextheight=\dimen165
-\c@subsectionslide=\count135
+\c@subsectionslide=\count137
 \beamer@frametopskip=\skip45
 \beamer@framebottomskip=\skip46
 \beamer@frametopskipautobreak=\skip47
 \beamer@framebottomskipautobreak=\skip48
 \beamer@envbody=\toks24
 \framewidth=\dimen166
-\c@framenumber=\count136
+\c@framenumber=\count138
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 Package: beamerbaseverbatim 2012/08/30  (rcs-revision dfdb135076b3)
 \beamer@verbatimfileout=\write4
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
-\beamer@splitbox=\box43
-\beamer@autobreakcount=\count137
+\beamer@splitbox=\box44
+\beamer@autobreakcount=\count139
 \beamer@autobreaklastheight=\dimen167
 \beamer@frametitletoks=\toks25
 \beamer@framesubtitletoks=\toks26
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
 Package: beamerbaseframecomponents 2012/09/13  (rcs-revision dcd846607320)
-\beamer@footins=\box44
+\beamer@footins=\box45
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
 Package: beamerbasecolor 2010/06/06  (rcs-revision d1a9b48be06d)
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 Package: beamerbasenotes 2012/12/19  (rcs-revision 1686da3db3c9)
-\beamer@frameboxcopy=\box45
+\beamer@frameboxcopy=\box46
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
 Package: beamerbasetoc 2012/10/02  (rcs-revision 5ed0f4010e8a)
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 Package: beamerbasetemplates 2010/05/01  (rcs-revision efa082c6111d)
 \beamer@sbttoks=\toks27
- (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
 Package: beamerbaseauxtemplates 2012/05/01  (rcs-revision 67c48b3b652d)
  (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
 Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
-\bmb@box=\box46
-\bmb@colorbox=\box47
-\bmb@boxshadow=\box48
-\bmb@boxshadowball=\box49
-\bmb@boxshadowballlarge=\box50
+\bmb@box=\box47
+\bmb@colorbox=\box48
+\bmb@boxshadow=\box49
+\bmb@boxshadowball=\box50
+\bmb@boxshadowballlarge=\box51
 \bmb@temp=\dimen168
 \bmb@dima=\dimen169
 \bmb@dimb=\dimen170
@@ -450,13 +460,12 @@ Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
 \beamer@blockheadheight=\dimen172
 )) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
 Package: beamerbaselocalstructure 2012/11/13  (rcs-revision ddfba79dac19)
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/enumerate.sty
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks28
 )
-\c@figure=\count138
-\c@table=\count139
+\c@figure=\count140
+\c@table=\count141
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
@@ -481,30 +490,30 @@ Package: amsbsy 1999/11/29 v1.2d
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count140
+\inf@bad=\count142
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count141
-\leftroot@=\count142
+\uproot@=\count143
+\leftroot@=\count144
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count143
-\DOTSCASE@=\count144
+\classnum@=\count145
+\DOTSCASE@=\count146
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 \big@size=\dimen176
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count145
-\c@MaxMatrixCols=\count146
+\macc@depth=\count147
+\c@MaxMatrixCols=\count148
 \dotsspace@=\muskip11
-\c@parentequation=\count147
-\dspbrk@lvl=\count148
+\c@parentequation=\count149
+\dspbrk@lvl=\count150
 \tag@help=\toks30
-\row@=\count149
-\column@=\count150
-\maxfields@=\count151
+\row@=\count151
+\column@=\count152
+\maxfields@=\count153
 \andhelp@=\toks31
 \eqnshift@=\dimen177
 \alignsep@=\dimen178
@@ -530,7 +539,7 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip56
 \dth@everypar=\toks39
 )
-\c@theorem=\count152
+\c@theorem=\count154
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
 Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
 )) (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/theme/beamerthemedefault.sty
@@ -567,21 +576,21 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen192
 \cmidrulekern=\dimen193
 \defaultaddspace=\dimen194
-\@cmidla=\count153
-\@cmidlb=\count154
+\@cmidla=\count155
+\@cmidlb=\count156
 \@aboverulesep=\dimen195
 \@belowrulesep=\dimen196
-\@thisruleclass=\count155
-\@lastruleclass=\count156
+\@thisruleclass=\count157
+\@lastruleclass=\count158
 \@thisrulewidth=\dimen197
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 91.
 
-(/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.aux)
+(/Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.aux)
 \openout1 = `presentation_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
@@ -598,11 +607,13 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -633,30 +644,7 @@ LaTeX Font Info:    ... okay on input line 100.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
-\scratchdimen=\dimen198
-\scratchbox=\box53
-\nofMPsegments=\count158
-\nofMParguments=\count159
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count160
-\MPscratchDim=\dimen199
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
-\everyMPtoPDFconversion=\toks41
-) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
- (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
 Package hyperref Info: Link coloring OFF on input line 100.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -664,12 +652,12 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count159
 )
 LaTeX Info: Redefining \ref on input line 100.
 LaTeX Info: Redefining \pageref on input line 100.
 LaTeX Info: Redefining \nameref on input line 100.
- (/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.out) (/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.out)
+ (/Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.out) (/Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.out)
 \@outlinefile=\write5
 \openout5 = `presentation_1.out'.
 
@@ -729,12 +717,12 @@ Dictionary: translator-numbers-dictionary, Language: English
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 100.
- (/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.nav)
+ (/Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 104.
 
-[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1
 
 ]
 LaTeX Font Info:    Try loading font information for U+msa on input line 118.
@@ -746,42 +734,27 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
-] <DemandSupply.pdf, id=110, 475.7775pt x 274.02374pt>
-File: DemandSupply.pdf Graphic file (type pdf)
- <use DemandSupply.pdf>
-Package pdftex.def Info: DemandSupply.pdf used on input line 130.
-(pdftex.def)             Requested size: 284.52756pt x 163.88031pt.
- [3
+]
+File: DemandSupply.pdf Graphic file (type QTm)
+ <use  "DemandSupply.pdf" > [3
 
- <./DemandSupply.pdf>] <figures/FuturePrices.pdf, id=146, 578.16pt x 433.62pt>
-File: figures/FuturePrices.pdf Graphic file (type pdf)
- <use figures/FuturePrices.pdf>
-Package pdftex.def Info: figures/FuturePrices.pdf used on input line 144.
-(pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
- [4
+]
+File: figures/FuturePrices.pdf Graphic file (type QTm)
+ <use  "figures/FuturePrices.pdf" > [4
 
- <./figures/FuturePrices.pdf>] [5
+] [5
 
-] <figures/1D.pdf, id=211, 597.50786pt x 845.04686pt>
-File: figures/1D.pdf Graphic file (type pdf)
- <use figures/1D.pdf>
-Package pdftex.def Info: figures/1D.pdf used on input line 181.
-(pdftex.def)             Requested size: 142.26378pt x 201.2036pt.
- <figures/2D1.pdf, id=212, 597.50786pt x 845.04686pt>
-File: figures/2D1.pdf Graphic file (type pdf)
- <use figures/2D1.pdf>
-Package pdftex.def Info: figures/2D1.pdf used on input line 181.
-(pdftex.def)             Requested size: 142.26378pt x 201.2036pt.
-
+]
+File: figures/1D.pdf Graphic file (type QTm)
+ <use  "figures/1D.pdf" >
+File: figures/2D1.pdf Graphic file (type QTm)
+ <use  "figures/2D1.pdf" >
 Overfull \vbox (26.33879pt too high) detected at line 181
  []
 
 [6
 
- <./figures/1D.pdf> <./figures/2D1.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./figures/2D1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [7
+] [7
 
 ] [8
 
@@ -810,316 +783,101 @@ Overfull \vbox (3.01003pt too high) detected at line 365
 
 ] [16
 
-]
-Package epstopdf Info: Source file: <figures/wonthappen.eps>
-(epstopdf)                    date: 2010-09-28 21:35:52
-(epstopdf)                    size: 36862 bytes
-(epstopdf)             Output file: <figures/wonthappen-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 18:28:04
-(epstopdf)                    size: 14075 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/wonthappen-eps-converted-to.pdf figures/wonthappen.eps>
-(epstopdf)             \includegraphics on input line 399.
-Package epstopdf Info: Output file is already uptodate.
- <figures/wonthappen-eps-converted-to.pdf, id=536, 597.50786pt x 845.04686pt>
-File: figures/wonthappen-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/wonthappen-eps-converted-to.pdf>
-Package pdftex.def Info: figures/wonthappen-eps-converted-to.pdf used on input line 399.
-(pdftex.def)             Requested size: 149.37659pt x 211.2612pt.
+] [17
 
-Overfull \vbox (36.3964pt too high) detected at line 399
+]
+File: figures/0step.eps Graphic file (type eps)
+ <figures/0step.eps> [18
+
+]
+File: figures/Where2Move0step.eps Graphic file (type eps)
+ <figures/Where2Move0step.eps> [19
+
+] [20
+
+]
+File: figures/Where2Move0step.eps Graphic file (type eps)
+ <figures/Where2Move0step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 534--534
+ [] 
  []
 
-[17
-
- <./figures/wonthappen-eps-converted-to.pdf>] [18
+[21
 
 ]
-Package epstopdf Info: Source file: <figures/0step.eps>
-(epstopdf)                    date: 2014-11-06 17:02:00
-(epstopdf)                    size: 9919 bytes
-(epstopdf)             Output file: <figures/0step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:07:58
-(epstopdf)                    size: 6374 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/0step-eps-converted-to.pdf figures/0step.eps>
-(epstopdf)             \includegraphics on input line 428.
-Package epstopdf Info: Output file is already uptodate.
- <figures/0step-eps-converted-to.pdf, id=603, 420.57124pt x 316.18124pt>
-File: figures/0step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/0step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/0step-eps-converted-to.pdf used on input line 428.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
- [19
+File: figures/Where2Move0step.eps Graphic file (type eps)
+ <figures/Where2Move0step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 534--534
+ [] 
+ []
 
- <./figures/0step-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/Where2Move0step.eps>
-(epstopdf)                    date: 2014-11-06 17:25:59
-(epstopdf)                    size: 44411 bytes
-(epstopdf)             Output file: <figures/Where2Move0step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 18:28:23
-(epstopdf)                    size: 22966 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move0step-eps-converted-to.pdf figures/Where2Move0step.eps>
-(epstopdf)             \includegraphics on input line 428.
-Package epstopdf Info: Output file is already uptodate.
- <figures/Where2Move0step-eps-converted-to.pdf, id=638, 420.57124pt x 316.18124pt>
-File: figures/Where2Move0step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move0step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move0step-eps-converted-to.pdf used on input line 428.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
- [20
-
- <./figures/Where2Move0step-eps-converted-to.pdf>] [21
-
-]
-Package epstopdf Info: Source file: <figures/Where2Move0step.eps>
-(epstopdf)                    date: 2014-11-06 17:25:59
-(epstopdf)                    size: 44411 bytes
-(epstopdf)             Output file: <figures/Where2Move0step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 18:28:23
-(epstopdf)                    size: 22966 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move0step-eps-converted-to.pdf figures/Where2Move0step.eps>
-(epstopdf)             \includegraphics on input line 558.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/Where2Move0step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move0step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move0step-eps-converted-to.pdf used on input line 558.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 558--558
+File: figures/Where2MoveSell.eps Graphic file (type eps)
+<figures/Where2MoveSell.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 534--534
  [] 
  []
 
 [22
 
 ]
-Package epstopdf Info: Source file: <figures/Where2Move0step.eps>
-(epstopdf)                    date: 2014-11-06 17:25:59
-(epstopdf)                    size: 44411 bytes
-(epstopdf)             Output file: <figures/Where2Move0step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 18:28:23
-(epstopdf)                    size: 22966 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move0step-eps-converted-to.pdf figures/Where2Move0step.eps>
-(epstopdf)             \includegraphics on input line 558.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/Where2Move0step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move0step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move0step-eps-converted-to.pdf used on input line 558.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 558--558
+File: figures/Where2Move0step.eps Graphic file (type eps)
+ <figures/Where2Move0step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 534--534
  [] 
  []
 
-Package epstopdf Info: Source file: <figures/Where2MoveSell.eps>
-(epstopdf)                    date: 2014-11-06 16:59:33
-(epstopdf)                    size: 9667 bytes
-(epstopdf)             Output file: <figures/Where2MoveSell-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:07:48
-(epstopdf)                    size: 6873 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2MoveSell-eps-converted-to.pdf figures/Where2MoveSell.eps>
-(epstopdf)             \includegraphics on input line 558.
-Package epstopdf Info: Output file is already uptodate.
-<figures/Where2MoveSell-eps-converted-to.pdf, id=732, 420.57124pt x 316.18124pt>
-File: figures/Where2MoveSell-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2MoveSell-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2MoveSell-eps-converted-to.pdf used on input line 558.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 558--558
+File: figures/Where2Move1step.eps Graphic file (type eps)
+<figures/Where2Move1step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 534--534
  [] 
  []
 
 [23
 
- <./figures/Where2MoveSell-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/Where2Move0step.eps>
-(epstopdf)                    date: 2014-11-06 17:25:59
-(epstopdf)                    size: 44411 bytes
-(epstopdf)             Output file: <figures/Where2Move0step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 18:28:23
-(epstopdf)                    size: 22966 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move0step-eps-converted-to.pdf figures/Where2Move0step.eps>
-(epstopdf)             \includegraphics on input line 558.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/Where2Move0step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move0step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move0step-eps-converted-to.pdf used on input line 558.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 558--558
- [] 
- []
-
-Package epstopdf Info: Source file: <figures/Where2Move1step.eps>
-(epstopdf)                    date: 2014-11-06 16:59:20
-(epstopdf)                    size: 10006 bytes
-(epstopdf)             Output file: <figures/Where2Move1step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:07:50
-(epstopdf)                    size: 6408 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move1step-eps-converted-to.pdf figures/Where2Move1step.eps>
-(epstopdf)             \includegraphics on input line 558.
-Package epstopdf Info: Output file is already uptodate.
-<figures/Where2Move1step-eps-converted-to.pdf, id=766, 420.57124pt x 316.18124pt>
-File: figures/Where2Move1step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move1step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move1step-eps-converted-to.pdf used on input line 558.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 558--558
+]
+File: figures/Where2Move13step.eps Graphic file (type eps)
+ <figures/Where2Move13step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 562--562
  [] 
  []
 
 [24
 
- <./figures/Where2Move1step-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/Where2Move13step.eps>
-(epstopdf)                    date: 2014-11-06 17:23:30
-(epstopdf)                    size: 58964 bytes
-(epstopdf)             Output file: <figures/Where2Move13step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:24:44
-(epstopdf)                    size: 15763 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move13step-eps-converted-to.pdf figures/Where2Move13step.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
- <figures/Where2Move13step-eps-converted-to.pdf, id=801, 420.57124pt x 316.18124pt>
-File: figures/Where2Move13step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move13step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move13step-eps-converted-to.pdf used on input line 586.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
+]
+File: figures/Where2Move13step.eps Graphic file (type eps)
+ <figures/Where2Move13step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 562--562
+ [] 
+ []
 
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 586--586
+File: figures/Where2MoveBuy.eps Graphic file (type eps)
+<figures/Where2MoveBuy.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 562--562
  [] 
  []
 
 [25
 
- <./figures/Where2Move13step-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/Where2Move13step.eps>
-(epstopdf)                    date: 2014-11-06 17:23:30
-(epstopdf)                    size: 58964 bytes
-(epstopdf)             Output file: <figures/Where2Move13step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:24:44
-(epstopdf)                    size: 15763 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move13step-eps-converted-to.pdf figures/Where2Move13step.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/Where2Move13step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move13step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move13step-eps-converted-to.pdf used on input line 586.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 586--586
+]
+File: figures/Where2Move13step.eps Graphic file (type eps)
+ <figures/Where2Move13step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 562--562
  [] 
  []
 
-Package epstopdf Info: Source file: <figures/Where2MoveBuy.eps>
-(epstopdf)                    date: 2014-11-06 17:00:15
-(epstopdf)                    size: 9871 bytes
-(epstopdf)             Output file: <figures/Where2MoveBuy-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:07:53
-(epstopdf)                    size: 7072 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2MoveBuy-eps-converted-to.pdf figures/Where2MoveBuy.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
-<figures/Where2MoveBuy-eps-converted-to.pdf, id=839, 420.57124pt x 316.18124pt>
-File: figures/Where2MoveBuy-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2MoveBuy-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2MoveBuy-eps-converted-to.pdf used on input line 586.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 586--586
+File: figures/Where2Move14step.eps Graphic file (type eps)
+<figures/Where2Move14step.eps>
+Overfull \hbox (14.581pt too wide) in paragraph at lines 562--562
  [] 
  []
 
 [26
 
- <./figures/Where2MoveBuy-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/Where2Move13step.eps>
-(epstopdf)                    date: 2014-11-06 17:23:30
-(epstopdf)                    size: 58964 bytes
-(epstopdf)             Output file: <figures/Where2Move13step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:24:44
-(epstopdf)                    size: 15763 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move13step-eps-converted-to.pdf figures/Where2Move13step.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/Where2Move13step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move13step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move13step-eps-converted-to.pdf used on input line 586.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
+] [27
 
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 586--586
- [] 
- []
+] [28
 
-Package epstopdf Info: Source file: <figures/Where2Move14step.eps>
-(epstopdf)                    date: 2014-11-06 17:00:23
-(epstopdf)                    size: 11389 bytes
-(epstopdf)             Output file: <figures/Where2Move14step-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-06 17:07:54
-(epstopdf)                    size: 6543 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/Where2Move14step-eps-converted-to.pdf figures/Where2Move14step.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
-<figures/Where2Move14step-eps-converted-to.pdf, id=873, 420.57124pt x 316.18124pt>
-File: figures/Where2Move14step-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/Where2Move14step-eps-converted-to.pdf>
-Package pdftex.def Info: figures/Where2Move14step-eps-converted-to.pdf used on input line 586.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 586--586
- [] 
- []
-
-[27
-
- <./figures/Where2Move14step-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/0Converge.eps>
-(epstopdf)                    date: 2014-11-08 19:46:05
-(epstopdf)                    size: 59960 bytes
-(epstopdf)             Output file: <figures/0Converge-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-08 19:46:45
-(epstopdf)                    size: 19663 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/0Converge-eps-converted-to.pdf figures/0Converge.eps>
-(epstopdf)             \includegraphics on input line 607.
-Package epstopdf Info: Output file is already uptodate.
- <figures/0Converge-eps-converted-to.pdf, id=908, 420.57124pt x 316.18124pt>
-File: figures/0Converge-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/0Converge-eps-converted-to.pdf>
-Package pdftex.def Info: figures/0Converge-eps-converted-to.pdf used on input line 607.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 607--607
- [] 
- []
-
-Package epstopdf Info: Source file: <figures/9Converge.eps>
-(epstopdf)                    date: 2014-11-08 19:43:15
-(epstopdf)                    size: 52287 bytes
-(epstopdf)             Output file: <figures/9Converge-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-08 19:46:46
-(epstopdf)                    size: 30099 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/9Converge-eps-converted-to.pdf figures/9Converge.eps>
-(epstopdf)             \includegraphics on input line 607.
-Package epstopdf Info: Output file is already uptodate.
-<figures/9Converge-eps-converted-to.pdf, id=909, 420.57124pt x 316.18124pt>
-File: figures/9Converge-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/9Converge-eps-converted-to.pdf>
-Package pdftex.def Info: figures/9Converge-eps-converted-to.pdf used on input line 607.
-(pdftex.def)             Requested size: 168.22551pt x 126.47025pt.
-
-Overfull \hbox (14.58058pt too wide) in paragraph at lines 607--607
- [] 
- []
-
-
-Overfull \vbox (6.07292pt too high) detected at line 607
- []
-
-[28
-
- <./figures/0Converge-eps-converted-to.pdf> <./figures/9Converge-eps-converted-to.pdf>] [29
-
-] [30
+] [29
 
 ]
 \tf@nav=\write6
@@ -1131,33 +889,25 @@ Overfull \vbox (6.07292pt too high) detected at line 607
 \tf@snm=\write8
 \openout8 = `presentation_1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 634.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 634.
- (/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 634.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 634.
-Package rerunfilecheck Info: File `presentation_1.out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 606.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 606.
+ (/Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 606.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 606.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 634.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 606.
  ) 
 Here is how much of TeX's memory you used:
- 16072 strings out of 493315
- 304994 string characters out of 6137904
- 376310 words of memory out of 5000000
- 19056 multiletter control sequences out of 15000+600000
- 14527 words of font info for 54 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 49i,19n,58p,886b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/zhaolong/Google Drive/Longcode/presentation/.texpadtmp/presentation_1.pdf" (30 pages, 309114 bytes).
-PDF statistics:
- 1066 PDF objects out of 1200 (max. 8388607)
- 958 compressed objects within 10 object streams
- 64 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18935 strings out of 493938
+ 339664 string characters out of 6148857
+ 418042 words of memory out of 5000000
+ 21844 multiletter control sequences out of 15000+600000
+ 14887 words of font info for 55 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 51i,19n,58p,886b,829s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on /Users/zhaolong/MovingBoundaryStorage/presentation/.texpadtmp/presentation_1.pdf (29 pages).
