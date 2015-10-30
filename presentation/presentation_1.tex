@@ -80,6 +80,8 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{setspace}
 
+\newcommand{\LL}{\mathcal{L}}
+
 \graphicspath{{figures/}}
 
 %----------------------------------------------------------------------------------------
@@ -153,10 +155,6 @@ Data comes from NYMEX.
   \item Continuous Time Singular Control $\Rightarrow$ HJB equation.\\
   \item HJB equation (free boundary problem) is very hard to solve.\\
   \item Moving boundary method is used in 1 dimension.\\
-  \begin{itemize}
-  \item Start with an initial guess and iteratively improve it until convergence.\\
-  \item A sequence of fixed boundary problems $\rightarrow$ free boundary problem\\
-\end{itemize}
 \end{itemize}
 \end{frame}
 %
@@ -177,22 +175,6 @@ Data comes from NYMEX.
   \caption{2 Dimensions}
   \end{figure}
 \end{columns}
-
-\end{frame}
-
-
-
-\begin{frame}
-{\bf Overview of Results}
-\begin{itemize}
-  \item Fixed boundary problem is solved efficiently. 
-  \item Moving boundary method is generalized to 2 dimensions.
-%  \begin{itemize}
-%  \item Initial guess.
-%  \item Direction and distance of movement.
-%  \item The Convergence.
-%\end{itemize}
-\end{itemize}
 
 \end{frame}
 
@@ -336,6 +318,38 @@ Now at $(x_0,q_0)$, $\epsilon$ is bought at price $e^{x_0}$. The average buying 
 
 \end{frame}
 
+\section{Moving Boundary Method}
+\begin{frame}
+{\bf Moving Boundary Method}
+\only<1>{
+	\begin{itemize}
+	  \item Start with an initial guess and iteratively improve it until convergence.\\
+	  \item A sequence of fixed boundary problems $\rightarrow$ free boundary problem\\
+	\end{itemize}
+}
+\only<2>{
+	\begin{itemize}
+		\item Initial guess.
+		\item How to solve fixed boundary problems efficiently.
+		\item How to improve boundary.
+	\end{itemize}
+}
+
+
+\end{frame}
+
+\begin{frame}
+{\bf Initial Guess}
+
+\begin{theorem}
+When the price is high enough, regardless of storage, selling is the optimal strategy.
+\end{theorem}
+
+% The initial guess for selling boundary is easy. At a high price, set the policies at that level are selling.
+% Give an counter example of second intuition.
+
+\end{frame}
+
 \begin{frame}
 {\bf Solving the Fixed Boundary Problem}
 \begin{itemize}
@@ -365,34 +379,16 @@ Boundary conditions can determine $A(q)$ and $B(q)$.
 \end{frame}
 
 \begin{frame}
-{\bf The Structure of Optimal Boundary}
-
-\begin{theorem}
-When the price is high enough, regardless of storage, selling is the optimal strategy.
-\end{theorem}
-
-% The initial guess for selling boundary is easy. At a high price, set the policies at that level are selling.
-% Give an counter example of second intuition.
-
-\end{frame}
-
-\section{Moving Boundary Method}
-\begin{frame}
-{\bf The Moving Boundary Method}
+{\bf Boundary Movement}
 
 \begin{columns}
    \column{0.4\textwidth} 
-\begin{itemize}
-  \item Challenges
-  \begin{itemize}
-  \item Initial guess.
-  \item 2 dimensions.
+
 \begin{itemize}
   \item Direction.
   \item Distance.
 \end{itemize}
-  \end{itemize}
-\end{itemize}
+
   \column{0.7\textwidth}
 \only<2>{\begin{figure}[hbt]
   \includegraphics[scale = 0.4]{0step.eps}
@@ -405,21 +401,7 @@ When the price is high enough, regardless of storage, selling is the optimal str
   \end{columns}
 \end{frame}
 
-\begin{frame}
-{\bf Algorithm}
-\begin{enumerate}
-  \item Begin with selling at very high price for all $q>0$.
-  \item Move selling and buying boundaries along price $x$ until convergence. 
-%  \begin{itemize}
-%  \item  The initial guess of buying is generated in this procedure.
-%  \item  Each time move to the point that generates highest positive profit.
-%\end{itemize}
 
-
-
-\end{enumerate}
-
-\end{frame}
 
 
 %\begin{frame}
@@ -561,6 +543,19 @@ When the price is high enough, regardless of storage, selling is the optimal str
 \end{columns}
 \end{frame}
 
+\begin{frame}
+{\bf Algorithm}
+\begin{enumerate}
+  \item Begin with selling at very high price for all $q>0$.
+  \item Move selling (buying) boundary along price $x$ to local maximal selling (buying) profit points until convergence. 
+%  \begin{itemize}
+%  \item  The initial guess of buying is generated in this procedure.
+%  \item  Each time move to the point that generates highest positive profit.
+%\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
 
 \begin{frame}
 {\bf Proof of Convergence}
@@ -568,10 +563,48 @@ When the price is high enough, regardless of storage, selling is the optimal str
 Each movement improves value function.
 \end{Theorem}
 \begin{columns}
-   \column{0.5\textwidth} 
-   Add the theorem.
-  \column{0.5\textwidth}
-	Here adds the figure shows what's the definition of sets $H^{n+1}...$
+   \column{0.6\textwidth} 
+   \small{
+   \only<1>{
+		\begin{equation*}
+		\begin{array}{ll}
+		\LL V^{n}(x,q) = 0& H^{n}\\
+		-V^{n}_q(x,q) + e^x - \mu(q) = 0 & S^{n}\\
+		-V^{n}_q(x,q) + e^x - \mu(q) > 0 & S^{n+1}/S^{n}\\
+		V^{n}_q(x,q) - e^x - \lambda(q) = 0 & B^{n}\\
+		V^{n}_q(x,q) - e^x - \lambda(q) > 0 & B^{n+1}/B^{n}\\
+		\end{array}
+		\end{equation*}
+	}
+
+	\only<2>{
+		\begin{equation*}
+		\begin{array}{ll}
+		\LL V^{n+1}(x,q) = 0 & H^{n+1}\\
+		-V^{n+1}_q(x,q) + e^x - \mu(q) = 0 & S^{n}\\
+		-V^{n+1}_q(x,q) + e^x - \mu(q) = 0 & S^{n+1}/S^{n}\\
+		V^{n+1}_q(x,q) - e^x - \lambda(q) = 0 &  B^{n}\\
+		V^{n+1}_q(x,q) - e^x - \lambda(q) = 0 &  B^{n+1}/B^{n}\\
+		\end{array}
+		\end{equation*}
+	}
+
+	\only<3>{
+		\begin{equation*}
+		\begin{split}
+		\LL \Delta V^{n+1}(x,q) &= 0 \quad H^{n+1}\\
+		\Delta V_q^{n+1}(x,q) &= 0 \quad S^{n}\\
+		\Delta V_q^{n+1}(x,q) &> 0 \quad S^{n+1}/S^{n}\\
+		\Delta V_q^{n+1}(x,q) &= 0 \quad B^{n}\\
+		\Delta V_q^{n+1}(x,q) &< 0 \quad B^{n+1}/B^{n}\\
+		\end{split}  
+		\end{equation*}
+	}
+	}
+	\column{0.5\textwidth}
+	\begin{figure}[hbt]
+	  \includegraphics[scale = 0.4]{PolicyImproveValue1.pdf}
+	\end{figure}
 \end{columns}
 
 \end{frame}
@@ -585,7 +618,40 @@ Each movement improves value function.
 The boundaries can be kept moving.
 \end{Theorem}
 
-Add some intuition about this.
+\begin{columns}
+   \column{0.6\textwidth} 
+   \small{
+
+	\only<1>{
+		\begin{equation*}
+		\begin{split}
+		\LL \Delta V^{n+1}(x,q) &= 0 \quad H^{n+1}\\
+		\Delta V_q^{n+1}(x,q) &= 0 \quad S^{n}\\
+		\Delta V_q^{n+1}(x,q) &> 0 \quad S^{n+1}/S^{n}\\
+		\Delta V_q^{n+1}(x,q) &= 0 \quad B^{n}\\
+		\Delta V_q^{n+1}(x,q) &< 0 \quad B^{n+1}/B^{n}\\
+		\end{split}  
+		\end{equation*}
+	}
+	
+	\only<2>{
+	At upper point
+		\begin{equation*}
+		\begin{split}
+		& (\Delta V_q^{n+1}(x,q))_x  \leq 0 \\
+		& (- V_q^{n}(x,q) + (e^x - \mu(q)))_x  =  0\\
+		\Rightarrow &(- V_q^{n + 1}(x,q) + (e^x - \mu(q)))_x  \leq  0\\
+		\end{split}  
+		\end{equation*}
+	}
+	
+	}
+	\column{0.5\textwidth}
+	\begin{figure}[hbt]
+	  \includegraphics[scale = 0.4]{PolicyImproveValue2.pdf}
+	\end{figure}
+\end{columns}
+
 \end{frame}
 
 
@@ -594,8 +660,6 @@ Add some intuition about this.
 
 \begin{itemize}
   \item Seasonality.
-  \item Storage cost.
-  \item Random injection and withdrawal.
 \end{itemize}
 
 \end{frame}

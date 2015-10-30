@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 OCT 2014 17:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 OCT 2015 20:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -145,7 +145,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-)) (/Users/zhaolong/Google Drive/Longcode/Proof/.texpadtmp/main proof.aux)
+)) (/Users/zhaolong/MovingBoundaryStorage/Proof/.texpadtmp/main proof.aux)
 \openout1 = `"main proof.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -314,10 +314,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
  []
 
 Package epstopdf Info: Source file: <SnSn+1Bn.eps>
-(epstopdf)                    date: 2014-10-09 13:49:27
-(epstopdf)                    size: 23646 bytes
+(epstopdf)                    date: 2015-05-11 16:40:11
+(epstopdf)                    size: 23017 bytes
 (epstopdf)             Output file: <SnSn+1Bn-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-09 13:50:14
+(epstopdf)                    date: 2015-05-11 16:40:11
 (epstopdf)                    size: 15882 bytes
 (epstopdf)             Command: <repstopdf --outfile=SnSn+1Bn-eps-converted-to.pdf SnSn+1Bn.eps>
 (epstopdf)             \includegraphics on input line 343.
@@ -333,10 +333,10 @@ Overfull \hbox (60.57022pt too wide) in paragraph at lines 343--344
  []
 
 Package epstopdf Info: Source file: <deltaV.eps>
-(epstopdf)                    date: 2014-10-09 13:55:40
-(epstopdf)                    size: 24658 bytes
+(epstopdf)                    date: 2015-05-11 16:40:11
+(epstopdf)                    size: 23978 bytes
 (epstopdf)             Output file: <deltaV-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-09 13:56:34
+(epstopdf)                    date: 2015-05-11 16:40:11
 (epstopdf)                    size: 16915 bytes
 (epstopdf)             Command: <repstopdf --outfile=deltaV-eps-converted-to.pdf deltaV.eps>
 (epstopdf)             \includegraphics on input line 359.
@@ -363,10 +363,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
 [5 <./deltaV-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Isolated.eps>
-(epstopdf)                    date: 2014-10-09 21:51:37
-(epstopdf)                    size: 17017 bytes
+(epstopdf)                    date: 2015-05-11 16:40:11
+(epstopdf)                    size: 16549 bytes
 (epstopdf)             Output file: <Isolated-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-09 21:57:15
+(epstopdf)                    date: 2015-05-11 16:40:11
 (epstopdf)                    size: 11604 bytes
 (epstopdf)             Command: <repstopdf --outfile=Isolated-eps-converted-to.pdf Isolated.eps>
 (epstopdf)             \includegraphics on input line 423.
@@ -382,10 +382,10 @@ Overfull \hbox (60.57022pt too wide) in paragraph at lines 423--424
  []
 
 Package epstopdf Info: Source file: <NotIsolated.eps>
-(epstopdf)                    date: 2014-10-09 21:51:59
-(epstopdf)                    size: 14554 bytes
+(epstopdf)                    date: 2015-05-11 16:40:11
+(epstopdf)                    size: 14147 bytes
 (epstopdf)             Output file: <NotIsolated-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-09 21:57:17
+(epstopdf)                    date: 2015-05-11 16:40:11
 (epstopdf)                    size: 9490 bytes
 (epstopdf)             Command: <repstopdf --outfile=NotIsolated-eps-converted-to.pdf NotIsolated.eps>
 (epstopdf)             \includegraphics on input line 428.
@@ -412,10 +412,10 @@ Overfull \hbox (11.67497pt too wide) in paragraph at lines 473--474
 
 [8]
 Package epstopdf Info: Source file: <deltaVstage2.eps>
-(epstopdf)                    date: 2014-10-09 21:54:50
-(epstopdf)                    size: 17303 bytes
+(epstopdf)                    date: 2015-05-11 16:40:11
+(epstopdf)                    size: 16776 bytes
 (epstopdf)             Output file: <deltaVstage2-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-09 21:57:18
+(epstopdf)                    date: 2015-05-11 16:40:11
 (epstopdf)                    size: 12500 bytes
 (epstopdf)             Command: <repstopdf --outfile=deltaVstage2-eps-converted-to.pdf deltaVstage2.eps>
 (epstopdf)             \includegraphics on input line 503.
@@ -460,17 +460,17 @@ Overfull \hbox (12.06273pt too wide) detected at line 730
 \OML/zplm/m/it/10.95 V\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 q\OT1/zplm/m/n/10.95 ) = [] \U/fplmbb/m/n/10.95 E[] []
  []
 
-[14] (/Users/zhaolong/Google Drive/Longcode/Proof/.texpadtmp/main proof.aux) ) 
+[14] (/Users/zhaolong/MovingBoundaryStorage/Proof/.texpadtmp/main proof.aux) ) 
 Here is how much of TeX's memory you used:
  4292 strings out of 493315
- 64052 string characters out of 6137904
+ 64050 string characters out of 6137904
  153508 words of memory out of 5000000
  7487 multiletter control sequences out of 15000+600000
  47997 words of font info for 200 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,21n,35p,917b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/zhaolong/Google Drive/Longcode/Proof/.texpadtmp/main proof.pdf" (14 pages, 184107 bytes).
+Output written on "/Users/zhaolong/MovingBoundaryStorage/Proof/.texpadtmp/main proof.pdf" (14 pages, 184107 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream
