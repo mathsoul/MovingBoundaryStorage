@@ -548,7 +548,7 @@ Boundary conditions can determine $A(q)$ and $B(q)$.
 \begin{enumerate}
   \item Begin with selling at very high price for all $q>0$.
   \item Move selling (buying) boundary along price $x$ to local maximal selling (buying) profit points until convergence. 
-%  \begin{itemize}
+%  \begin{itemize}ss
 %  \item  The initial guess of buying is generated in this procedure.
 %  \item  Each time move to the point that generates highest positive profit.
 %\end{itemize}
@@ -570,8 +570,8 @@ Each movement improves value function.
 		\begin{array}{ll}
 		\LL V^{n}(x,q) = 0& H^{n}\\
 		-V^{n}_q(x,q) + e^x - \mu(q) = 0 & S^{n}\\
-		-V^{n}_q(x,q) + e^x - \mu(q) > 0 & S^{n+1}/S^{n}\\
 		V^{n}_q(x,q) - e^x - \lambda(q) = 0 & B^{n}\\
+		-V^{n}_q(x,q) + e^x - \mu(q) > 0 & S^{n+1}/S^{n}\\
 		V^{n}_q(x,q) - e^x - \lambda(q) > 0 & B^{n+1}/B^{n}\\
 		\end{array}
 		\end{equation*}
@@ -581,10 +581,8 @@ Each movement improves value function.
 		\begin{equation*}
 		\begin{array}{ll}
 		\LL V^{n+1}(x,q) = 0 & H^{n+1}\\
-		-V^{n+1}_q(x,q) + e^x - \mu(q) = 0 & S^{n}\\
-		-V^{n+1}_q(x,q) + e^x - \mu(q) = 0 & S^{n+1}/S^{n}\\
-		V^{n+1}_q(x,q) - e^x - \lambda(q) = 0 &  B^{n}\\
-		V^{n+1}_q(x,q) - e^x - \lambda(q) = 0 &  B^{n+1}/B^{n}\\
+		-V^{n+1}_q(x,q) + e^x - \mu(q) = 0 & S^{n+1}\\
+		V^{n+1}_q(x,q) - e^x - \lambda(q) = 0 &  B^{n+1}\\
 		\end{array}
 		\end{equation*}
 	}
@@ -600,6 +598,17 @@ Each movement improves value function.
 		\end{split}  
 		\end{equation*}
 	}
+	
+	\only<4>{
+		\begin{equation*}
+		\begin{split}
+		\LL \Delta V^{n+1}(x,q) &= 0 \quad H^{n+1}\\
+		\Delta V_q^{n+1}(x,q) &\geq 0 \quad S^{n+1}\\
+		\Delta V_q^{n+1}(x,q) &\leq  0 \quad B^{n+1}\\
+		\end{split}  
+		\end{equation*}
+	}
+	
 	}
 	\column{0.5\textwidth}
 	\begin{figure}[hbt]
